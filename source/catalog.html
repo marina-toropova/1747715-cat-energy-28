@@ -26,12 +26,12 @@
         <span class="visually-hidden">Открыть меню</span>
       </button>
 
-      <ul class="nav__list">
+      <ul class="nav__list nav-list">
         <li class="nav__item">
-          <a class="nav__link" href="index.html">главная</a>
+          <a class="nav__link nav__link--current">главная</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link nav__link--current">каталог продукции</a>
+          <a class="nav__link" href="catalog.html">каталог продукции</a>
         </li>
         <li class="nav__item">
           <a class="nav__link" href="form.html">подбор программы</a>
@@ -45,13 +45,20 @@
   <main class="main-container">
 
     <section class="catalog">
-      <h1 class="main-catalog__title">Каталог продукции</h1>
+      <h1 class="main-catalog__title title-secondary--dark title-secondary">Каталог продукции</h1>
+
       <ul class="catalog__list catalog-list">
 
         <li class="catalog-list__item catalog-item">
-          <a href="#"><img class="catalog-item__image" src="img/cat-energy-pro-chicken-500.png"
-            alt="Питание Cat Energy PRO с курицей, 500 грамм."></a>
-          <a href="#"><h2 class="catalog-item__subtitle">Cat Energy PRO 500 г</h2></a>
+
+          <a class="catalog-item__image-link catalog-item-image-link" href="#">
+            <img class="catalog-item-image-link__image" src="img/cat-energy-pro-chicken-500.png"
+            alt="Питание Cat Energy PRO с курицей, 500 грамм.">
+          </a>
+          <a class="catalog-item__subtitle-link" href="#">
+            <h2 class="title-tertiary">Cat Energy PRO 500 г</h2>
+          </a>
+
           <ul class="catalog-item__list">
             <li class="catalog-item__item">
               <span class="catalog-item__text">Масса</span>
@@ -66,13 +73,20 @@
               <span class="catalog-item__value">700 ₽</span>
             </li>
           </ul>
+
           <a href="#" class="catalog-item__link button--primary button">заказать</a>
         </li>
 
         <li class="catalog-list__item catalog-item">
-          <img class="catalog-item__image" src="img/catalog-pro-chicken-1000.png"
+
+          <a class="catalog-item__image-link catalog-item-image-link" href="#">
+            <img class="catalog-item-image-link__image" src="img/catalog-pro-chicken-1000.png"
             alt="Питание Cat Energy PRO с курицей, 1000 грамм.">
-          <h2 class="catalog-item__subtitle">Cat Energy PRO 1000 г</h2>
+          </a>
+          <a class="catalog-item__subtitle-link" href="#">
+            <h2 class="title-tertiary">Cat Energy PRO 1000 г</h2>
+          </a>
+
           <ul class="catalog-item__list">
             <li class="catalog-item__item">
               <span class="catalog-item__text">Масса</span>
@@ -91,9 +105,15 @@
         </li>
 
         <li class="catalog-list__item catalog-item">
-          <img class="catalog-item__image" src="img/catalog-pro-fish-500.png"
+
+          <a class="catalog-item__image-link catalog-item-image-link" href="#">
+            <img class="catalog-item-image-link__image" src="img/catalog-pro-fish-500.png"
             alt="Питание Cat Energy PRO с рыбой, 500 грамм.">
-          <h2 class="catalog-item__subtitle">Cat Energy PRO 500 г</h2>
+          </a>
+          <a class="catalog-item__subtitle-link" href="#">
+            <h2 class="title-tertiary">Cat Energy PRO 500 г</h2>
+          </a>
+
           <ul class="catalog-item__list">
             <li class="catalog-item__item">
               <span class="catalog-item__text">Масса</span>
@@ -112,9 +132,14 @@
         </li>
 
         <li class="catalog-list__item catalog-item">
-          <img class="catalog-item__image" src="img/catalog-pro-fish-1000.png"
+          <a class="catalog-item__image-link catalog-item-image-link" href="#">
+            <img class="catalog-item-image-link__image" src="img/catalog-pro-fish-1000.png"
             alt="Питание Cat Energy PRO с рыбой, 1000 грамм.">
-          <h2 class="catalog-item__subtitle">Cat Energy PRO 1000 г</h2>
+          </a>
+          <a class="catalog-item__subtitle-link" href="#">
+            <h2 class="title-tertiary">Cat Energy PRO 1000 г</h2>
+          </a>
+
           <ul class="catalog-item__list">
             <li class="catalog-item__item">
               <span class="catalog-item__text">Масса</span>
@@ -133,9 +158,14 @@
         </li>
 
         <li class="catalog-list__item catalog-item">
-          <img class="catalog-item__image" src="img/catalog-slim-buckwheat-500.png"
+          <a class="catalog-item__image-link catalog-item-image-link" href="#">
+            <img class="catalog-item-image-link__image" src="img/catalog-slim-buckwheat-500.png"
             alt="Питание Cat Energy PRO с гречкой, 500 грамм.">
-          <h2 class="catalog-item__subtitle">Cat Energy SLIM 500 г</h2>
+          </a>
+          <a class="catalog-item__subtitle-link" href="#">
+            <h2 class="title-tertiary">Cat Energy SLIM 500 г</h2>
+          </a>
+
           <ul class="catalog-item__list">
             <li class="catalog-item__item">
               <span class="catalog-item__text">Масса</span>
@@ -154,9 +184,14 @@
         </li>
 
         <li class="catalog-list__item catalog-item">
-          <img class="catalog-item__image" src="img/catalog-slim-buckwheat-1000.png"
+          <a class="catalog-item__image-link catalog-item-image-link" href="#">
+            <img class="catalog-item-image-link__image" src="img/catalog-slim-buckwheat-1000.png"
             alt="Питание Cat Energy PRO с гречкой, 1000 грамм.">
-          <h2 class="catalog-item__subtitle">Cat Energy SLIM 500 г</h2>
+          </a>
+          <a class="catalog-item__subtitle-link" href="#">
+            <h2 class="title-tertiary">Cat Energy SLIM 500 г</h2>
+          </a>
+
           <ul class="catalog-item__list">
             <li class="catalog-item__item">
               <span class="catalog-item__text">Масса</span>
@@ -175,9 +210,15 @@
         </li>
 
         <li class="catalog-list__item catalog-item">
-          <img class="catalog-item__image" src="img/catalog-slim-rice-500.png"
+          <a class="catalog-item__image-link catalog-item-image-link" href="#">
+            <img class="catalog-item-image-link__image" src="img/catalog-slim-rice-500.png"
             alt="Питание Cat Energy PRO с рисом, 500 грамм.">
-          <h2 class="catalog-item__subtitle">Cat Energy SLIM 500 г</h2>
+          </a>
+          <a class="catalog-item__subtitle-link" href="#">
+            <h2 class="title-tertiary">Cat Energy SLIM 500 г</h2>
+          </a>
+
+
           <ul class="catalog-item__list">
             <li class="catalog-item__item">
               <span class="catalog-item__text">Масса</span>
@@ -209,34 +250,34 @@
 
     <section class="additional-goods">
       <div class="container">
-        <h2 class="additional-goods__titile">Дополнительные товары</h2>
-        <ul class="additional-goods__list">
+        <h2 class="additional-goods__title title-small">Дополнительные товары</h2>
+        <ul class="additional-goods__list additional-goods-list">
 
           <li class="additional-goods__item additional-goods-item">
-            <h3 class="additional-goods-item__title">Сахарозаменитель</h3>
-            <span class="additional-goods-item__description">1 упаковка (100 г)</span>
-            <span class="additional-goods-item__price">200 ₽</span>
+            <h3 class="additional-goods-item__title title-quaternary">Сахарозаменитель</h3>
+            <span class="additional-goods-item__description text-small">1 упаковка (100 г)</span>
+            <span class="additional-goods-item__price text-small">200 ₽</span>
             <a href="#" class="additional-goods-item__link button--primary button">заказать</a>
           </li>
 
           <li class="additional-goods__item additional-goods-item">
-            <h3 class="additional-goods-item__title">питьевая вода</h3>
-            <span class="additional-goods-item__description">5 литров</span>
-            <span class="additional-goods-item__price">50 ₽</span>
+            <h3 class="additional-goods-item__title title-quaternary">питьевая вода</h3>
+            <span class="additional-goods-item__description text-small">5 литров</span>
+            <span class="additional-goods-item__price text-small">50 ₽</span>
             <a href="#" class="additional-goods-item__link button--primary button">заказать</a>
           </li>
 
           <li class="additional-goods__item additional-goods-item">
-            <h3 class="additional-goods-item__title">молоко</h3>
-            <span class="additional-goods-item__description">1 литр</span>
-            <span class="additional-goods-item__price">100 ₽</span>
+            <h3 class="additional-goods-item__title title-quaternary">молоко</h3>
+            <span class="additional-goods-item__description text-small">1 литр</span>
+            <span class="additional-goods-item__price text-small">100 ₽</span>
             <a href="#" class="additional-goods-item__link button--primary button">заказать</a>
           </li>
 
           <li class="additional-goods__item additional-goods-item">
-            <h3 class="additional-goods-item__title">витамины</h3>
-            <span class="additional-goods-item__description">1 упаковка (30 г)</span>
-            <span class="additional-goods-item__price">300 ₽</span>
+            <h3 class="additional-goods-item__title title-quaternary">витамины</h3>
+            <span class="additional-goods-item__description text-small">1 упаковка (30 г)</span>
+            <span class="additional-goods-item__price text-small">300 ₽</span>
             <a href="#" class="additional-goods-item__link button--primary button">заказать</a>
           </li>
 
@@ -245,8 +286,8 @@
     </section>
 
     <section class="gifts">
-      <div class="container">
-        <h2 class="gifts__title">Закажите все
+      <div class="gifts__container container">
+        <h2 class="gifts__title ">Закажите все
           и получите чехол для
           кота в подарок!</h2>
       </div>
@@ -254,13 +295,13 @@
 
     <section class="contacts">
       <h2 class="visually-hidden">Контакты.</h2>
-      <div class="contacts__wrapper">
-        <h3 class="contacts__subtitile">приглашаем к сотрудничеству дилеров!</h3>
-        <p class="contacts__address">ул. Большая
+      <div class="contacts__wrapper contacts-wrapper container">
+        <h3 class="contacts-wrapper__subtitile">приглашаем к сотрудничеству дилеров!</h3>
+        <p class="contacts-wrapper__address">ул. Большая
           Конюшенная, д. 19/8
           Санкт-Петербург</p>
       </div>
-      <div class="contacts__map">
+      <div class="contacts__map map">
         <iframe
           src="https://yandex.ru/map-widget/v1/?um=constructor%3A33a6384a169da9fe6a874e10027292468fc4d78870f41401455554d19f120d8a&amp;source=constructor"
           width="100%" height="362" frameborder="0"></iframe>
@@ -269,7 +310,7 @@
   </main>
 
   <footer class="main-footer">
-    <div class="main-footer__wrapper">
+    <div class="main-footer__wrapper container">
 
       <a href="#" class="main-footer__logo-2 logo-2">
         <img src="/source/img/logo-2.svg" width="101" height="18" alt="Логотип Cat Energy.">

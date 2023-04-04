@@ -40,59 +40,61 @@
   </header>
 
   <main>
-    <section class="program-selection">
-      <div class="container">
-        <h1 class="program-selection__title">Подбор программы</h1>
-        <p class="program-selection__text"></p>
-        <form class="program-selection__form" action="https://echo.htmlacademy.ru/" method="get">
 
-          <ul class="program-selection__list program-selection-list">
-            <li class="program-selection__item">
+    <section class="program-selection">
+      <div class="program-selection__wrapper container">
+        <h1 class="program-selection__title title-secondary">Подбор программы</h1>
+        <p class="program-selection__text"></p>
+
+        <form class="program-selection__form programm-selection-form" action="https://echo.htmlacademy.ru/" method="get">
+
+          <ul class="program-selection-form__list program-selection-list">
+            <li class="program-selection-form__item">
               <label for="name">ИМЯ:*</label>
-              <input type="text" name="name" placeholder="барсик">
+              <input class="input" type="text" name="name" placeholder="барсик">
             </li>
-            <li class="program-selection__item">
+            <li class="program-selection-form__item">
               <label for="weight">Вес (кг):*</label>
-              <input type="text" name="weight" placeholder="7">
+              <input class="input" type="text" name="weight" placeholder="7">
             </li>
-            <li class="program-selection__item">
+            <li class="program-selection-form__item">
               <label for="age">Возраст (лет):</label>
-              <input type="text" name="age" placeholder="7">
+              <input class="input" type="text" name="age" placeholder="7">
             </li>
           </ul>
 
-          <ul class="program-selection__list program-selection-list">
-            <li class="program-selection__item">
-              <input type="radio" name="weight-loss" value="weight-loss" id="weight-loss" checked>
+          <ul class="program-selection-form__list program-selection-list">
+            <li class="program-selection-form__item">
+              <input class="input" type="radio" name="weight-loss" value="weight-loss" id="weight-loss" checked>
               <label for="weight-loss">похудение</label>
             </li>
-            <li class="program-selection__item">
-              <input type="radio" name="weight-gain" value="weight-gain" id="weight-gain">
+            <li class="program-selection-form__item">
+              <input class="input" type="radio" name="weight-gain" value="weight-gain" id="weight-gain">
               <label for="weight-gain">Набор массы</label>
             </li>
-            <li class="program-selection__item">
-              <input type="radio" name="dont-know" value="dont-know" id="dont-know">
+            <li class="program-selection-form__item">
+              <input class="input" type="radio" name="dont-know" value="dont-know" id="dont-know">
               <label for="dont-know">Не знаю (Нужен ваш совет)</label>
             </li>
           </ul>
 
-          <div class="contact-details">
-            <h2 class="contact-details__title">Контактные данные
+          <div class="program-selection-form__contact-details contact-details">
+            <h2 class="contact-details__title title-form">Контактные данные
               (владельца кота)</h2>
-              <ul class="program-selection__list">
-                <li class="program-selection__item">
+              <ul class="program-selection-form__list">
+                <li class="program-selection-form__item">
                   <label for="email">E-mail:*</label>
-                  <input type="email" name="email" placeholder="kuklachev@gmail.com" id="email">
+                  <input class="input" type="email" name="email" placeholder="kuklachev@gmail.com" id="email">
                 </li>
-                <li class="program-selection__item">
+                <li class="program-selection-form__item">
                   <label for="phone">Телефон:*</label>
-                  <input type="tel" name="phone" placeholder="7" id="phone">
+                  <input class="input" type="tel" name="phone" placeholder="7" id="phone">
                 </li>
               </ul>
           </div>
 
-          <div class="comment">
-            <h2 class="comment__title">
+          <div class="program-selection-form__comment comment">
+            <h2 class="comment__title title-form">
               Комментарий
             </h2>
             <label for="comment">
@@ -100,27 +102,27 @@
             </label>
           </div>
 
-          <div class="additionally">
-            <h2 class="additionally__title">Дополнительно</h2>
-            <ul class="additionally__list program-selection-list">
-              <li class="program-selection__item">
-                <input type="checkbox" name="sweetener" value="sweetener" id="sweetener" checked>
+          <div class="program-selection-form__additionally additionally">
+            <h2 class="additionally__title title-form">Дополнительно</h2>
+            <ul class="additionally__list program-selection-form-list">
+              <li class="program-selection-form__item">
+                <input class="input" type="checkbox" name="sweetener" value="sweetener" id="sweetener" checked>
                 <label for="sweetener">сахарозаменитель</label>
               </li>
-              <li class="program-selection__item">
-                <input type="checkbox" name="drinking-water" value="weight-gain" id="weight-gain">
+              <li class="program-selection-form__item">
+                <input class="input" type="checkbox" name="drinking-water" value="weight-gain" id="weight-gain">
                 <label for="weight-gain">питьевая вода</label>
               </li>
-              <li class="program-selection__item">
-                <input type="checkbox" name="dont-know" value="dont-know" id="dont-know">
+              <li class="program-selection-form__item">
+                <input class="input" class="input" type="checkbox" name="dont-know" value="dont-know" id="dont-know">
                 <label for="dont-know">молоко</label>
               </li>
-              <li class="program-selection__item">
-                <input type="checkbox" name="dont-know" value="dont-know" id="dont-know">
+              <li class="program-selection-form__item">
+                <input class="input" type="checkbox" name="dont-know" value="dont-know" id="dont-know">
                 <label for="dont-know">витамины</label>
               </li>
             </ul>
-            <a href="#" class="additionally__link button--primary button">отправить заявку</a>
+            <a class="additionally__link button--primary button" href="#">отправить заявку</a>
             <span class="additionally__text">* — Обязательные поля</span>
           </div>
 
@@ -128,17 +130,15 @@
       </div>
     </section>
 
-
-
     <section class="contacts">
       <h2 class="visually-hidden">Контакты.</h2>
-      <div class="contacts__wrapper">
-        <h3 class="contacts__subtitile">приглашаем к сотрудничеству дилеров!</h3>
-        <p class="contacts__address">ул. Большая
+      <div class="contacts__wrapper contacts-wrapper container">
+        <h3 class="contacts-wrapper__subtitile">приглашаем к сотрудничеству дилеров!</h3>
+        <p class="contacts-wrapper__address">ул. Большая
           Конюшенная, д. 19/8
           Санкт-Петербург</p>
       </div>
-      <div class="contacts__map">
+      <div class="contacts__map map">
         <iframe
           src="https://yandex.ru/map-widget/v1/?um=constructor%3A33a6384a169da9fe6a874e10027292468fc4d78870f41401455554d19f120d8a&amp;source=constructor"
           width="100%" height="362" frameborder="0"></iframe>
@@ -192,5 +192,6 @@
 
     </div>
   </footer>
+
 </body>
 </html>
