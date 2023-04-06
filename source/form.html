@@ -19,7 +19,7 @@
 
     <nav class="main-header__nav nav">
 
-      <button class="nav__toggle nav__button--closed button" type="button">
+      <button class="nav__toggle button nav__button--closed" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
 
@@ -51,11 +51,11 @@
           <ul class="program-selection-form__list program-selection-list">
             <li class="program-selection-form__item">
               <label for="name">ИМЯ:*</label>
-              <input class="input" type="text" name="name" placeholder="барсик">
+              <input class="input" type="text" name="name" placeholder="барсик" required>
             </li>
             <li class="program-selection-form__item">
               <label for="weight">Вес (кг):*</label>
-              <input class="input" type="text" name="weight" placeholder="7">
+              <input class="input" type="text" name="weight" placeholder="7" required>
             </li>
             <li class="program-selection-form__item">
               <label for="age">Возраст (лет):</label>
@@ -84,11 +84,11 @@
               <ul class="program-selection-form__list">
                 <li class="program-selection-form__item">
                   <label for="email">E-mail:*</label>
-                  <input class="input" type="email" name="email" placeholder="kuklachev@gmail.com" id="email">
+                  <input class="input" type="email" name="email" placeholder="kuklachev@gmail.com" id="email" required>
                 </li>
                 <li class="program-selection-form__item">
                   <label for="phone">Телефон:*</label>
-                  <input class="input" type="tel" name="phone" placeholder="7" id="phone">
+                  <input class="input" type="tel" name="phone" placeholder="7" id="phone" required>
                 </li>
               </ul>
           </div>
@@ -122,7 +122,7 @@
                 <label for="dont-know">витамины</label>
               </li>
             </ul>
-            <a class="additionally__link button--primary button" href="#">отправить заявку</a>
+            <a class="additionally__link button button--primary" href="#">отправить заявку</a>
             <span class="additionally__text">* — Обязательные поля</span>
           </div>
 
