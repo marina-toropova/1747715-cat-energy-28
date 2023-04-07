@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -9,38 +9,38 @@
   <title>HTML Academy: Кэт энерджи. Каталог.</title>
 </head>
 
-<body>
+<body class="page__body">
 
   <header class="main-header">
+    <div class="main-header__container container">
+      <a href="#" class="main-header__logo logo">
+        <img src="img/logo-mobile.svg" width="33" height="38" alt="Логотип.">
+      </a>
 
-    <a href="#" class="main-header__logo logo">
-      <img src="/source/img/logo-mobile.svg" width="33" height="38" alt="Логотип.">
-    </a>
+      <a href="#" class="main-header__logo-2 logo-2">
+        <img src="img/logo-2.svg" width="101" height="18" alt="Логотип Cat Energy.">
+      </a>
 
-    <a href="#" class="main-header__logo-2 logo-2">
-      <img src="/source/img/logo-2.svg" width="101" height="18" alt="Логотип Cat Energy.">
-    </a>
+      <nav class="main-header__nav nav">
 
-    <nav class="main-header__nav nav">
+        <button class="nav__toggle button nav__button--closed" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
 
-      <button class="nav__toggle button nav__button--closed" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+        <ul class="nav__list nav-list">
+          <li class="nav__item">
+            <a class="nav__link nav__link--current">главная</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="catalog.html">каталог продукции</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="form.html">подбор программы</a>
+          </li>
+        </ul>
 
-      <ul class="nav__list nav-list">
-        <li class="nav__item">
-          <a class="nav__link nav__link--current">главная</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="catalog.html">каталог продукции</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="form.html">подбор программы</a>
-        </li>
-      </ul>
-
-    </nav>
-
+      </nav>
+    </div>
   </header>
 
   <main class="main-container">
@@ -54,7 +54,7 @@
 
           <a class="catalog-list__image-link catalog-list-image-link" href="#">
             <img class="catalog-list-image-link__image" src="img/cat-energy-pro-chicken-500.png"
-            alt="Питание Cat Energy PRO с курицей, 500 грамм.">
+              alt="Питание Cat Energy PRO с курицей, 500 грамм.">
           </a>
           <a class="catalog-list__subtitle-link" href="#">
             <h2 class="title-tertiary">Cat Energy PRO 500 г</h2>
@@ -82,7 +82,7 @@
 
           <a class="catalog-list__image-link catalog-list-image-link" href="#">
             <img class="catalog-list-image-link__image" src="img/catalog-pro-chicken-1000.png"
-            alt="Питание Cat Energy PRO с курицей, 1000 грамм.">
+              alt="Питание Cat Energy PRO с курицей, 1000 грамм.">
           </a>
           <a class="catalog-list__subtitle-link" href="#">
             <h2 class="title-tertiary">Cat Energy PRO 1000 г</h2>
@@ -109,7 +109,7 @@
 
           <a class="catalog-list__image-link catalog-list-image-link" href="#">
             <img class="catalog-list-image-link__image" src="img/catalog-pro-fish-500.png"
-            alt="Питание Cat Energy PRO с рыбой, 500 грамм.">
+              alt="Питание Cat Energy PRO с рыбой, 500 грамм.">
           </a>
           <a class="catalog-list__subtitle-link" href="#">
             <h2 class="title-tertiary">Cat Energy PRO 500 г</h2>
@@ -135,7 +135,7 @@
         <li class="catalog-list__item">
           <a class="catalog-list__image-link catalog-list-image-link" href="#">
             <img class="catalog-list-image-link__image" src="img/catalog-pro-fish-1000.png"
-            alt="Питание Cat Energy PRO с рыбой, 1000 грамм.">
+              alt="Питание Cat Energy PRO с рыбой, 1000 грамм.">
           </a>
           <a class="catalog-list__subtitle-link" href="#">
             <h2 class="title-tertiary">Cat Energy PRO 1000 г</h2>
@@ -161,7 +161,7 @@
         <li class="catalog-list__item">
           <a class="catalog-list__image-link catalog-list-image-link" href="#">
             <img class="catalog-list-image-link__image" src="img/catalog-slim-buckwheat-500.png"
-            alt="Питание Cat Energy PRO с гречкой, 500 грамм.">
+              alt="Питание Cat Energy PRO с гречкой, 500 грамм.">
           </a>
           <a class="catalog-list__subtitle-link" href="#">
             <h2 class="title-tertiary">Cat Energy SLIM 500 г</h2>
@@ -187,7 +187,7 @@
         <li class="catalog-list__item">
           <a class="catalog-list__image-link catalog-list-image-link" href="#">
             <img class="catalog-list-image-link__image" src="img/catalog-slim-buckwheat-1000.png"
-            alt="Питание Cat Energy PRO с гречкой, 1000 грамм.">
+              alt="Питание Cat Energy PRO с гречкой, 1000 грамм.">
           </a>
           <a class="catalog-list__subtitle-link" href="#">
             <h2 class="title-tertiary">Cat Energy SLIM 500 г</h2>
@@ -213,7 +213,7 @@
         <li class="catalog-list__item">
           <a class="catalog-list__image-link catalog-list-image-link" href="#">
             <img class="catalog-list-image-link__image" src="img/catalog-slim-rice-500.png"
-            alt="Питание Cat Energy PRO с рисом, 500 грамм.">
+              alt="Питание Cat Energy PRO с рисом, 500 грамм.">
           </a>
           <a class="catalog-list__subtitle-link" href="#">
             <h2 class="title-tertiary">Cat Energy SLIM 500 г</h2>
@@ -335,10 +335,12 @@
       </div>
 
       <div class="main-footer__logo-wrapper logo-wrapper">
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="logo-wrapper__academy-link academy-link" target="_blank">
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="logo-wrapper__academy-link academy-link"
+          target="_blank">
           HTML Academy
         </a>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="logo-wrapper__logoacademy logo-academy" target="_blank">
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="logo-wrapper__logoacademy logo-academy"
+          target="_blank">
           <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_87120_341)">
               <path

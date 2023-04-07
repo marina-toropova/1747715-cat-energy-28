@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,37 +8,38 @@
   <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Кэт энерджи. Подбор программы.</title>
 </head>
-<body>
+
+<body class="page__body">
   <header class="main-header">
+    <div class="main-header__container container">
+      <a href="#" class="main-header__logo logo">
+        <img src="img/logo-mobile.svg" width="33" height="38" alt="Логотип.">
+      </a>
 
-    <a href="#" class="main-header__logo logo">
-      <img src="/source/img/logo-mobile.svg" width="33" height="38" alt="Логотип.">
-    </a>
+      <a href="#" class="main-header__logo-2 logo-2">
+        <img src="img/logo-2.svg" width="101" height="18" alt="Логотип Cat Energy.">
+      </a>
 
-    <a href="#" class="main-header__logo-2 logo-2">
-      <img src="/source/img/logo-2.svg" width="101" height="18" alt="Логотип Cat Energy.">
-    </a>
+      <nav class="main-header__nav nav">
 
-    <nav class="main-header__nav nav">
+        <button class="nav__toggle button nav__button--closed" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
 
-      <button class="nav__toggle button nav__button--closed" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="index.html">главная</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="catalog.html">каталог продукции</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--current">подбор программы</a>
+          </li>
+        </ul>
 
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link" href="index.html">главная</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="catalog.html">каталог продукции</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link nav__link--current">подбор программы</a>
-        </li>
-      </ul>
-
-    </nav>
-
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -47,7 +49,8 @@
         <h1 class="program-selection__title title-secondary">Подбор программы</h1>
         <p class="program-selection__text"></p>
 
-        <form class="program-selection__form programm-selection-form" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="program-selection__form programm-selection-form" action="https://echo.htmlacademy.ru/"
+          method="get">
 
           <ul class="program-selection-form__list program-selection-list">
             <li class="program-selection-form__item">
@@ -82,16 +85,16 @@
           <div class="program-selection-form__contact-details contact-details">
             <h2 class="contact-details__title title-form">Контактные данные
               (владельца кота)</h2>
-              <ul class="program-selection-form__list">
-                <li class="program-selection-form__item">
-                  <label for="email">E-mail:*</label>
-                  <input class="input" type="email" name="email" placeholder="kuklachev@gmail.com" id="email" required>
-                </li>
-                <li class="program-selection-form__item">
-                  <label for="phone">Телефон:*</label>
-                  <input class="input" type="tel" name="phone" placeholder="7" id="phone" required>
-                </li>
-              </ul>
+            <ul class="program-selection-form__list">
+              <li class="program-selection-form__item">
+                <label for="email">E-mail:*</label>
+                <input class="input" type="email" name="email" placeholder="kuklachev@gmail.com" id="email" required>
+              </li>
+              <li class="program-selection-form__item">
+                <label for="phone">Телефон:*</label>
+                <input class="input" type="tel" name="phone" placeholder="7" id="phone" required>
+              </li>
+            </ul>
           </div>
 
           <div class="program-selection-form__comment comment">
@@ -99,7 +102,8 @@
               Комментарий
             </h2>
             <label for="comment">
-              <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
+              <textarea name="comment" id="comment" cols="30" rows="10"
+                placeholder="Расскажите обо всех повАдках кота"></textarea>
             </label>
           </div>
 
@@ -172,10 +176,12 @@
       </div>
 
       <div class="main-footer__logo-wrapper logo-wrapper">
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="logo-wrapper__academy-link academy-link" target="_blank">
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="logo-wrapper__academy-link academy-link"
+          target="_blank">
           HTML Academy
         </a>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="logo-wrapper__logoacademy logo-academy" target="_blank">
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="logo-wrapper__logoacademy logo-academy"
+          target="_blank">
           <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_87120_341)">
               <path
@@ -195,4 +201,5 @@
   </footer>
 
 </body>
+
 </html>
