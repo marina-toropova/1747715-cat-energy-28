@@ -1,3 +1,7 @@
+.examples {
+  background-color: @color-grey;
+}
+
 .examples__wrapper {
   padding: 25px 0 40px;
 }
@@ -5,12 +9,12 @@
 .examples__text {
   font-size: 12px;
   line-height: 12px;
-  color: @color-black;
 
   &--big {
-    font-family: 'Oswald';
+    font-family: "Oswald";
     font-size: 24px;
     line-height: 24px;
+    color: @color-black;
   }
 }
 
@@ -19,4 +23,8 @@
   line-height: 20px;
   text-transform: uppercase;
   color: @color-black;
+}
+
+.examples__description.text-normal {
+  margin-top: 40px;
 }
