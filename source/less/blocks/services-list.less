@@ -1,3 +1,16 @@
 .services-list {
   .list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: @tablet) {
+    gap: 30px;
+  }
+
+  @media (min-width: @desktop) {
+    flex-direction: row;
+    gap: 80px;
+    flex-wrap: wrap;
+  }
 }
