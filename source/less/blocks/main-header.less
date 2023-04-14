@@ -1,3 +1,27 @@
+.main-header {
+
+}
+
 .main-header__container {
-  padding: 10px 20px;
+  padding: 10px 0 17px;
+  min-height: 65px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet) {
+    padding: 0;
+  }
+}
+
+.main-header__logo {
+  margin-right: 57px;
+
+  @media (min-width: @tablet) {
+    margin-right: 12px;
+  }
+}
+
+.main-header__logo-wrapper{
+  display: flex;
+  align-items: center;
 }
