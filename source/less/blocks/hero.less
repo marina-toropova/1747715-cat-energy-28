@@ -2,6 +2,10 @@
   @media (min-width: @tablet) {
     min-height: 872px;
   }
+
+  @media (min-width: @tablet) {
+    min-height: 666px;
+  }
 }
 
 .hero__wrapper {
@@ -17,15 +21,21 @@
   }
 }
 
-.hero__inner-wrapper.container {
+.hero__inner-wrapper {
+  width: 280px;
+
   @media (min-width: @tablet) {
-    width: 532px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     position: relative;
     gap: 40px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-right: auto;
+    padding-left: 80px;
   }
 }
 
@@ -34,6 +44,7 @@
 
   @media (min-width: @tablet) {
     text-align: start;
+    width: 532px;
   }
 }
 
@@ -70,5 +81,10 @@
     position: absolute;
     left: 200px;
     top: 317px;
+  }
+
+  @media (min-width: @desktop) {
+    top: 0;
+    left: 536px;
   }
 }
