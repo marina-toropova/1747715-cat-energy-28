@@ -1,5 +1,15 @@
 .catalog-list {
   .list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+
+  @media (min-width: @tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 60px;
+  }
 }
 
 .catalog-list__list {
@@ -9,6 +19,14 @@
 .catalog-list__item {
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: @tablet) {
+    width: 324px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 245px;
+  }
 }
 
 .catalog-list__subtitle {
@@ -25,4 +43,8 @@
 .catalog-list__text {
   text-align: center;
   margin: 0;
+}
+
+.catalog-list-image-link__image {
+  min-height: 100px;
 }
