@@ -3,4 +3,40 @@
   line-height: 16px;
   color: @black;
   text-align: center;
+
+  @media (min-width: @tablet) {
+    text-align: left;
+  }
+}
+
+.additionally__link {
+  @media (min-width: @tablet) {
+    padding: 13px 55px;
+  }
+}
+
+.additionally__list {
+  @media (min-width: @tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 64px;
+    row-gap: 32px;
+  }
+
+  @media (min-width: @desktop) {
+    column-gap: 80px;
+  }
+}
+
+.additionally_link-text-wrapper {
+
+  @media (min-width: @tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+
+  @media (min-width: @desktop) {
+    gap: 80px;
+  }
 }

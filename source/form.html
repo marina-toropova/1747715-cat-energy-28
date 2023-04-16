@@ -53,7 +53,7 @@
         <form class="program-selection__form programm-selection-form" action="https://echo.htmlacademy.ru/"
           method="get">
 
-          <ul class="program-selection-form__list program-selection-list">
+          <ul class="program-selection-form__list program-selection-list program-selection-form__list--name">
             <li class="program-selection-form__item">
               <label for="name">ИМЯ:*</label>
               <input class="input" type="text" name="name" placeholder="барсик" required>
@@ -68,7 +68,7 @@
             </li>
           </ul>
 
-          <ul class="program-selection-form__list program-selection-list">
+          <ul class="program-selection-form__list program-selection-list program-selection-form__list--selection">
             <li class="program-selection-form__item program-selection-form__item--bright">
               <input class="input" type="radio" name="weight-loss" value="weight-loss" id="weight-loss" checked>
               <label for="weight-loss">похудение</label>
@@ -86,7 +86,7 @@
           <div class="program-selection-form__contact-details contact-details">
             <h2 class="contact-details__title title-form">Контактные данные
               (владельца кота)</h2>
-            <ul class="program-selection-form__list program-selection-list">
+            <ul class="program-selection-form__list program-selection-list program-selection-form__list--contacts">
               <li class="program-selection-form__item">
                 <label for="email">E-mail:*</label>
                 <input class="input" type="email" name="email" placeholder="kuklachev@gmail.com" id="email" required>
@@ -128,15 +128,17 @@
                 <label for="dont-know">витамины</label>
               </li>
             </ul>
+            <div class="additionally_link-text-wrapper">
             <a class="additionally__link button button--wide button--primary" href="#">отправить заявку</a>
             <span class="additionally__text">* — Обязательные поля</span>
+          </div>
           </div>
 
         </form>
       </div>
     </section>
 
-    <section class="contacts">
+    <section class="contacts contacts--catalog">
       <h2 class="visually-hidden">Контакты.</h2>
       <div class="contacts__wrapper contacts-wrapper contacts-wrapper--form container">
         <h3 class="contacts-wrapper__subtitile">приглашаем к сотрудничеству дилеров!</h3>
