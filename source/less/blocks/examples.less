@@ -4,17 +4,47 @@
 
 .examples__wrapper {
   padding: 25px 0 40px;
+  display: grid;
+  grid-template-areas: "heading heading"
+                        "text text"
+                        "weight days"
+                        "summary summary"
+                        "slider slider";
+
+  @media (min-width: @tablet) {
+    grid-template-areas: "heading heading heading"
+                        "text text text"
+                        "weight days summary"
+                        "slider slider slider";
+  }
+
+  @media (min-width: @desktop) {
+    grid-template-columns: 218px 218px auto;
+    grid-template-areas: "heading heading slider"
+                        "text text slider"
+                        "weight days slider"
+                        "summary summary slider";
+  }
 }
 
 .examples__text {
   font-size: 12px;
   line-height: 12px;
+  width: 84px;
 
   &--big {
     font-family: @oswald;
     font-size: 24px;
     line-height: 24px;
     color: @black;
+  }
+
+  &--weight {
+    grid-area: weight;
+  }
+
+  &--days {
+    grid-area: days;
   }
 }
 
@@ -23,8 +53,25 @@
   line-height: 20px;
   text-transform: uppercase;
   color: @black;
+  grid-area: summary;
+}
+
+.examples__description {
+  grid-area: text;
 }
 
 .examples__description.text-normal {
   margin-top: 40px;
+}
+
+.examples__title {
+  grid-area: heading;
+}
+
+.examples__slider {
+  grid-area: slider;
+
+  @media (min-width: @tablet) {
+    justify-self: center;
+  }
 }
