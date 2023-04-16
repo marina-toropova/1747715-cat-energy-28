@@ -6,24 +6,24 @@
   padding: 25px 0 40px;
   display: grid;
   grid-template-areas: "heading heading"
-                        "text text"
-                        "weight days"
-                        "summary summary"
-                        "slider slider";
+    "text text"
+    "weight days"
+    "summary summary"
+    "slider slider";
 
   @media (min-width: @tablet) {
     grid-template-areas: "heading heading heading"
-                        "text text text"
-                        "weight days summary"
-                        "slider slider slider";
+      "text text text"
+      "weight days summary"
+      "slider slider slider";
   }
 
   @media (min-width: @desktop) {
     grid-template-columns: 218px 218px auto;
     grid-template-areas: "heading heading slider"
-                        "text text slider"
-                        "weight days slider"
-                        "summary summary slider";
+      "text text slider"
+      "weight days slider"
+      "summary summary slider";
   }
 }
 
