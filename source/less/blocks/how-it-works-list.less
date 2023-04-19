@@ -1,3 +1,22 @@
 .how-it-works-list {
   .list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: @tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 153px;
+  }
+
+  @media (min-width: @desktop) {
+    gap: 94px;
+  }
+}
+
+.how-it-works__item {
+  @media (min-width: @tablet) {
+    flex-basis: 230px;
+  }
 }

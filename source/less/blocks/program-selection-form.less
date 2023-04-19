@@ -1,3 +1,37 @@
+.programm-selection-form {
+  display: grid;
+
+  @media (min-width: @desktop) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "name selection"
+      "contacts contacts"
+      "comment comment"
+      "additionally additionally";
+    column-gap: 80px;
+  }
+}
+
+.program-selection-form__list {
+  &--name {
+    @media (min-width: @desktop) {
+      grid-area: name;
+    }
+  }
+
+  &--selection {
+    @media (min-width: @desktop) {
+      grid-area: selection;
+    }
+  }
+
+  &--contacts {
+    @media (min-width: @desktop) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 80px;
+    }
+  }
+}
 
 .program-selection-form__item {
 
@@ -12,7 +46,28 @@
   }
 }
 
+.program-selection-form__contact-details {
+  @media (min-width: @desktop) {
+    grid-area: contacts;
+  }
+}
 
-textarea::-webkit-input-placeholder {
-  .text-input;
+.program-selection-form__comment {
+  @media (min-width: @desktop) {
+    grid-area: comment;
+  }
+
+  textarea {
+    width: -webkit-fill-available;
+
+    &::-webkit-input-placeholder {
+      .text-input;
+    }
+  }
+}
+
+.program-selection-form__additionally {
+  @media (min-width: @desktop) {
+    grid-area: additionally;
+  }
 }
