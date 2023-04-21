@@ -30,13 +30,29 @@
 .examples__text {
   font-size: 12px;
   line-height: 12px;
-  width: 84px;
+  width: 124px;
+  position: relative;
+  border: 1px solid @dark-grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 0;
+  margin-top: 20px;
 
   &--big {
     font-family: @oswald;
     font-size: 24px;
     line-height: 24px;
     color: @black;
+  }
+
+  &--small {
+    position: absolute;
+    display: block;
+    background-color: @grey;
+    width: 77px;
+    bottom: -14px;
+    text-align: center;
   }
 
   &--weight {
@@ -49,11 +65,13 @@
 }
 
 .examples__summary {
+  text-align: center;
   font-family: @oswald;
   line-height: 20px;
   text-transform: uppercase;
   color: @black;
   grid-area: summary;
+  margin-top: 34px;
 }
 
 .examples__description {

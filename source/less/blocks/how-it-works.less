@@ -4,4 +4,36 @@
 
 .how-it-works__list.how-it-works-list {
   margin-top: 40px;
+  padding-left: 80px;
+}
+
+.how-it-works__item {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: @green;
+    left: -80px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--leaf::before {
+    background-image: url(../../img/icon-leaf.svg);
+  }
+
+  &--tub::before {
+    background-image: url(../../img/icon-tub.svg);
+  }
+
+  &--eat::before {
+    background-image: url(../../img/icon-eat.svg);
+  }
+
+  &--alarm::before {
+    background-image: url(../../img/icon-alarm.svg);
+  }
 }

@@ -1,7 +1,21 @@
-.services__title {
-  margin: 0;
-}
 
 .services__description {
   margin: 0;
+  padding: 29px 0 23px;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.services__link {
+  margin-top: 15px;
+  display: block;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 10px;
+    background-image: url(../../img/arrow-right.svg);
+    margin-left: 15px;
+  }
 }

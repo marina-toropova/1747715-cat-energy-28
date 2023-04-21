@@ -11,7 +11,7 @@
 <body class="page__body">
 
   <header class="main-header">
-    <div class="main-header__container container">
+    <div class="main-header__container">
 
       <div class="main-header__logo-wrapper">
 
@@ -23,13 +23,13 @@
         <img src="img/logo-2.svg" width="101" height="18" alt="Логотип Cat Energy.">
       </a>
     </div>
-      <nav class="main-header__nav nav">
+      <nav class="main-header__nav nav nav--closed nav--nojs">
 
-        <button class="nav__toggle button nav__button--closed" type="button">
+        <button class="nav__toggle button" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
-        <ul class="nav__list nav-list">
+        <ul class="nav__list nav-list nav-list--closed">
           <li class="nav__item">
             <a class="nav__link nav__link--current">главная</a>
           </li>
@@ -73,7 +73,7 @@
 
         <ul class="services__list services-list">
 
-          <li class="services__item services-item services__item--slim">
+          <li class="services__item services-item services-item--slim">
             <h3 class="services__title title-services">похудение</h3>
             <p class="services__description services-description">Ваш кот весит больше собаки и почти утратил
               способность лазить по деревьям?
@@ -81,7 +81,7 @@
             <a href="#" class="services__link services-link button">каталог slim</a>
           </li>
 
-          <li class="services__item services-item services__item--pro">
+          <li class="services__item services-item services-item--pro">
             <h3 class="services__title title-services">Набор массы</h3>
             <p class="services__description services-description">Заработать авторитет среди дворовых котов и даже
               собак? Серия Cat Energy
@@ -145,10 +145,12 @@
         <div class="examples__text examples__text--weight">
           <span class="examples__text--big">
             5 КГ
-          </span>снижение веса</div>
+          </span>
+          <span class="examples__text--small">снижение веса</span></div>
         <div class="examples__text examples__text--days">
           <span class="examples__text--big">60 ДНЕЙ</span>
-            затрачено времени</div>
+          <span class="examples__text--small">затрачено времени</span>
+            </div>
         <span class="examples__summary">Затраты на питание: 15 000 РУБ.</span>
         <div class="examples__slider slider">
           <img class="slider__image" src="img/cat-before.png" alt="Кот до и после." width="280" height="256">
@@ -178,7 +180,7 @@
     <div class="main-footer__wrapper container">
 
       <a href="#" class="main-footer__logo-2 logo-2">
-        <img class="logo-2__image" src="img/logo-2.svg" width="101" height="18" alt="Логотип Cat Energy.">
+        <img class="logo-2__image logo-2__image--big" src="img/logo-2.svg" width="101" height="18" alt="Логотип Cat Energy.">
       </a>
 
       <div class="main-footer__social social">
@@ -236,6 +238,7 @@
     </div>
   </footer>
 
+  <script src="js/script.js"></script>
 </body>
 
 </html>

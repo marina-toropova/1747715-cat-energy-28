@@ -1,17 +1,19 @@
 
 
 .main-header__container {
-  padding: 10px 0 17px;
-  min-height: 65px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 280px;
+  margin: 0 auto;
 
   @media (min-width: @tablet) {
+    width: 708px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 0;
   }
 
   @media (min-width: @desktop) {
+    width: 1220px;
     min-height: 112px;
   }
 }
@@ -27,4 +29,5 @@
 .main-header__logo-wrapper {
   display: flex;
   align-items: center;
+  min-height: 65px;
 }
