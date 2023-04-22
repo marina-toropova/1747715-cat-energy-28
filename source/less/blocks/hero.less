@@ -27,8 +27,12 @@
 
   @media (min-width: @desktop) {
     &::after {
+      content: "";
+      position: absolute;
       width: 50%;
       height: 74%;
+      background-color: @green;
+      background-image: url(../../img/index-background-hero.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       z-index: -1;

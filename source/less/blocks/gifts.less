@@ -8,10 +8,13 @@
 .gifts__container {
   background-color: @green;
   min-height: 290px;
+  background-color: @green;
   background-image: url(../../img/gifts-background.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 100%;
   margin-top: 35px;
+  position: relative;
 
   @media (min-width: @desktop) {
     width: 245px;
@@ -25,4 +28,15 @@
   text-align: center;
   color: @white;
   margin: 0;
+  padding-top: 187px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 78px;
+    height: 78px;
+    background-image: url(../../img/icon-gift.svg);
+    top: 21%;
+    left: 50%;
+  }
 }

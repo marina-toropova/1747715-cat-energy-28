@@ -1,7 +1,21 @@
+.additional-goods-item {
+  border-top: 1px solid @another-grey;
+
+  &:last-child {
+    border-bottom: 1px solid @another-grey;
+  }
+}
+
 .additional-goods-item span {
   line-height: 14px;
 }
 
 .additional-goods-item__title {
   line-height: 16px;
+}
+
+.additional-goods-item__text-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 13px 0 15px;
 }
