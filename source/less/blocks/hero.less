@@ -12,10 +12,14 @@
   min-height: 302px;
   background-color: @green;
   background: url(../../img/index-background-hero.jpg);
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position-x: center;
-  background-size: contain;
   padding-top: 27px;
+
+  @media (max-width: @tablet - 1px) {
+    position: relative;
+  }
 
   @media (min-width: @tablet) {
     background-image: none;
@@ -23,11 +27,8 @@
 
   @media (min-width: @desktop) {
     &::after {
-      content: "";
-      position: absolute;
       width: 50%;
       height: 74%;
-      background-image: url(../../img/index-background-hero.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       z-index: -1;
