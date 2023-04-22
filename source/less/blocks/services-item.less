@@ -9,6 +9,7 @@
 
   @media (min-width: @desktop) {
     flex-basis: 570px;
+    padding: 77px 61px 55px 52px;
   }
 
   .services__title::before {
@@ -26,7 +27,15 @@
       height: 200px;
       left: 477px;
     }
+
+    @media (min-width: @desktop) {
+      width: 100px;
+      height: 106px;
+      left: 52px;
+      top: 41px;
+    }
   }
+
 
   &--pro .services__title::before {
     width: 67px;
@@ -38,12 +47,19 @@
       height: 200px;
       left: 412px;
     }
+
+    @media (min-width: @desktop) {
+      width: 134px;
+      height: 100px;
+      top: 47px;
+      left: 33px;
   }
+}
 
   &--pro .services__title {
     margin-left: 44px;
 
-    @media (min-width: @tablet) {
+    @media (min-width: @tablet) and (max-width: 1439px) {
       margin: 0;
     }
   }

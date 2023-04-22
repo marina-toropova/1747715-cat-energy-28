@@ -3,8 +3,8 @@
     min-height: 872px;
   }
 
-  @media (min-width: @tablet) {
-    min-height: 872px;
+  @media (min-width: @desktop) {
+    min-height: 667px;
   }
 }
 
@@ -19,6 +19,21 @@
 
   @media (min-width: @tablet) {
     background-image: none;
+  }
+
+  @media (min-width: @desktop) {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 74%;
+      background-image: url(../../img/index-background-hero.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+      top: 0;
+      right: 0;
+    }
   }
 }
 
@@ -90,7 +105,8 @@
   }
 
   @media (min-width: @desktop) {
-    top: 0;
-    left: 536px;
+    top: -66px;
+    left: 459px;
+    z-index: 0;
   }
 }

@@ -6,13 +6,13 @@
   background-color: @white;
   width: 100%;
 
-  @media (max-width: 767px) {
+  @media (max-width: @tablet - 1px) {
     position: absolute;
   }
 
   &--closed {
 
-    @media (max-width: 767px) {
+    @media (max-width: @tablet - 1px) {
       display: none;
     }
   }
@@ -24,5 +24,18 @@
   @media (min-width: @tablet) {
     flex-direction: row;
   }
+
+  @media (min-width: @desktop) {
+    background-color: transparent;
+  }
 }
 
+.nav-list--index a {
+  @media (min-width: @desktop) {
+    color: @white;
+
+    &::after {
+      background-color: @white;
+    }
+  }
+}

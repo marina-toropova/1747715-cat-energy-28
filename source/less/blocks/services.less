@@ -1,7 +1,7 @@
 .services__title {
   text-align: center;
 
-  @media (min-width: @tablet) {
+  @media (min-width: @tablet) and (max-width: 1439px) {
     text-align: left;
   }
 
@@ -20,13 +20,22 @@
   @media (min-width: @tablet) {
     width: 340px;
     border: none;
+    padding: 24px 0 48px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 73px 0 23px;
+    width: auto;
   }
 }
 
 .services__link {
-  margin-top: 15px;
   display: block;
   position: relative;
+
+  @media (max-width: 767px) {
+    padding-top: 15px;
+  }
 
   &::after {
     position: absolute;
