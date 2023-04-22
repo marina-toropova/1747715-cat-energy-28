@@ -11,7 +11,7 @@
 
 <body class="page__body">
 
-  <header class="main-header">
+  <header class="main-header main-header--line">
     <div class="main-header__container container">
       <div class="main-header__logo-wrapper">
 
@@ -24,15 +24,15 @@
         </a>
       </div>
 
-      <nav class="main-header__nav nav nav--closed">
+      <nav class="main-header__nav nav nav--closed nav--nojs">
 
-        <button class="nav__toggle button nav__button--closed" type="button">
+        <button class="nav__toggle button" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
-        <ul class="nav__list nav-list">
+        <ul class="nav__list nav-list nav-list--closed nav-list--index">
           <li class="nav__item">
-            <a class="nav__link"  href="index.html">главная</a>
+            <a class="nav__link nav__link--current" href="index.html">главная</a>
           </li>
           <li class="nav__item">
             <a class="nav__link nav__link--current">каталог продукции</a>
@@ -49,7 +49,7 @@
   <main class="main-container">
     <div class="main-container__container container">
     <section class="catalog">
-      <h1 class="main-catalog__title title-secondary title-secondary--dark">Каталог продукции</h1>
+      <h1 class="catalog__title title-secondary title-secondary--dark">Каталог продукции</h1>
 
       <ul class="catalog__list catalog-list">
 
@@ -246,7 +246,7 @@
             <span class="visually-hidden">Показать еще.</span>
           </a>
           <p class="catalog-list__text">На самом деле вкусов гораздо больше!</p>
-          <a href="#" class="catalog-list__link button button--wide button--tertiary button--primary">показать все</a>
+          <a href="#" class="catalog-list__link button catalog-list__link--show-all button--wide button--tertiary button--primary">показать все</a>
         </li>
 
       </ul>
