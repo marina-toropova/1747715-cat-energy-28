@@ -4,19 +4,23 @@
   @media (min-width: @tablet) {
     background-color: inherit;
     border-top: 1px solid @light-grey;
+    position: relative;
   }
 
-  @media (min-width: @desktop) {
-    position: relative;
-
-    &::after {
+  &::after {
+    @media (min-width: @tablet) {
       content: "";
       position: absolute;
-      background-color: @grey;
+      background-color: @very-light-grey;
       width: 100%;
-      height: 70%;
+      height: 43%;
       bottom: 0;
       z-index: -2;
+    }
+
+    @media (min-width: @desktop) {
+      background-color: @grey;
+      height: 70%;
     }
   }
 }
@@ -95,6 +99,7 @@
       font-size: 14px;
       line-height: 14px;
       width: auto;
+      padding: 0 10px;
       bottom: -6px;
     }
 
