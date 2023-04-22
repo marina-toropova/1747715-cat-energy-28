@@ -3,6 +3,14 @@
   padding: 21px 20px 18px;
   position: relative;
 
+  &::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
   @media (min-width: @tablet) {
     padding: 77px 53px 53px;
   }
@@ -12,12 +20,7 @@
     padding: 77px 61px 55px 52px;
   }
 
-  .services__title::before {
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-
-  &--slim .services__title::before {
+  &--slim::before {
     width: 50px;
     height: 53px;
     background-image: url(../../img/cat-slim.svg);
@@ -25,7 +28,8 @@
     @media (min-width: @tablet) {
       width: 200px;
       height: 200px;
-      left: 477px;
+      left: auto;
+      right: 62px;
     }
 
     @media (min-width: @desktop) {
@@ -37,7 +41,7 @@
   }
 
 
-  &--pro .services__title::before {
+  &--pro::before {
     width: 67px;
     height: 50px;
     background-image: url(../../img/cat-pro.svg);
@@ -45,7 +49,8 @@
     @media (min-width: @tablet) {
       width: 268px;
       height: 200px;
-      left: 412px;
+      left: auto;
+      right: 28px;
     }
 
     @media (min-width: @desktop) {
