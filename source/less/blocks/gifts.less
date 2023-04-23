@@ -16,6 +16,12 @@
   margin-top: 35px;
   position: relative;
 
+  @media (min-width: @tablet) {
+    margin-top: 69px;
+    margin-bottom: 76px;
+    min-height: 200px;
+  }
+
   @media (min-width: @desktop) {
     width: 245px;
   }
@@ -28,15 +34,27 @@
   text-align: center;
   color: @white;
   margin: 0;
-  padding-top: 187px;
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 78px;
-    height: 78px;
-    background-image: url(../../img/icon-gift.svg);
-    top: 21%;
-    left: 50%;
+  @media (min-width: @tablet) {
+    width: 161px;
+    text-align: left;
+  }
+}
+
+.gifts__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding-top: 59px;
+
+  @media (min-width: @tablet) {
+    flex-direction: row;
+    gap: 265px;
+  }
+
+  svg {
+    order: -1;
   }
 }
