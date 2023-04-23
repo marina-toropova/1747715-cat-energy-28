@@ -12,13 +12,20 @@
 }
 
 .program-selection-form__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
   &--name {
+    border-bottom: 1px solid @grey85;
     @media (min-width: @desktop) {
       grid-area: name;
     }
   }
 
   &--selection {
+    border-bottom: 1px solid @grey85;
+    align-items: start;
     @media (min-width: @desktop) {
       grid-area: selection;
     }
@@ -33,12 +40,36 @@
   }
 }
 
+.program-selection-form__list.program-selection-form__list--name {
+  padding: 39px 0 24px;
+}
+
+.program-selection-form__list.program-selection-form__list--selection {
+  padding: 22px 0 19px;
+
+  input {
+    width: auto;
+  }
+}
+
+.program-selection-form__list.program-selection-form__list--contacts {
+  margin-top: 35px;
+
+  .program-selection-form__item {
+    gap: 10px
+  }
+}
+
 .program-selection-form__item {
 
   .text-input;
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
 
   input {
     .text-input;
+    padding: 10px 20px;
   }
 
   &--bright {
@@ -47,12 +78,14 @@
 }
 
 .program-selection-form__contact-details {
+  padding-top: 26px;
   @media (min-width: @desktop) {
     grid-area: contacts;
   }
 }
 
 .program-selection-form__comment {
+  padding: 23px 0;
   @media (min-width: @desktop) {
     grid-area: comment;
   }
