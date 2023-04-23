@@ -4,18 +4,17 @@
   @media (min-width: @tablet) {
     border: none;
   }
-
-  @media (min-width: @desktop) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 79px;
-  }
 }
 
 .additional-goods__container {
+  flex-grow: 1;
+}
+
+.additional-goods__wrapper {
   @media (min-width: @desktop) {
-    margin: 0;
-    width: 896px;
+    display: flex;
+    gap: 79px;
+    margin-bottom: 86px;
   }
 }
 
@@ -30,6 +29,11 @@
   @media (min-width: @tablet) {
     line-height: 36px;
     padding: 68px 0 80px;
+    margin-left: 37px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0;
   }
 }
 

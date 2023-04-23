@@ -1,8 +1,4 @@
-.additional-goods__title {
-  @media (min-width: @tablet) {
-    margin-left: 37px;
-  }
-}
+
 
 .additional-goods-item {
   border-top: 1px solid @another-grey;
@@ -16,7 +12,16 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "heading text"
       "link link";
-      row-gap: 25px;
+    row-gap: 25px;
+  }
+
+  @media (min-width: @desktop) {
+    border-left: none;
+    border-right: none;
+    padding: 15px 0;
+    grid-template-columns: 1fr 1fr 3% 27%;
+    grid-template-areas: "heading text . link";
+    align-items: center;
   }
 
   &:last-child {
@@ -44,6 +49,10 @@
     margin: 0;
     justify-content: end;
     column-gap: 50px;
+  }
+
+  @media (min-width: @desktop) {
+    justify-content: space-between;
   }
 }
 

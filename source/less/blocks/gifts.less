@@ -24,6 +24,8 @@
 
   @media (min-width: @desktop) {
     width: 245px;
+    min-height: 289px;
+    margin: 0;
   }
 }
 
@@ -39,6 +41,10 @@
     width: 161px;
     text-align: left;
   }
+
+  @media (min-width: @desktop) {
+    text-align: center;
+  }
 }
 
 .gifts__link {
@@ -49,7 +55,7 @@
   gap: 48px;
   padding-top: 59px;
 
-  @media (min-width: @tablet) {
+  @media (min-width: @tablet) and (max-width: @desktop - 1px) {
     flex-direction: row;
     gap: 265px;
   }
