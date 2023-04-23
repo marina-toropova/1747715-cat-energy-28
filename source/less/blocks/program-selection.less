@@ -1,5 +1,13 @@
 .program-selection__wrapper {
   padding: 27px 0 24px;
+
+  @media (min-width: @tablet) {
+    padding: 46px 0 72px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 75px 0 82px;
+  }
 }
 
 .program-selection__text {
@@ -8,6 +16,11 @@
   color: @black;
   margin: 0;
   margin-top: 37px;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .program-selection__form {
