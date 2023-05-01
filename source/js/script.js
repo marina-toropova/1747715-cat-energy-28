@@ -16,4 +16,3 @@ navToggle.addEventListener('click', function () {
     navList.classList.toggle('nav-list--opened');
   }
 });
-

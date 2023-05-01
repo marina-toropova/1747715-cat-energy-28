@@ -7,7 +7,6 @@
 }
 
 .main-header__container {
-
   @media (min-width: @tablet) {
     width: 708px;
     display: flex;
@@ -34,4 +33,15 @@
   display: flex;
   align-items: center;
   min-height: 65px;
+  transition: 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+    transition: 0.2s;
+  }
+
+  &:active {
+    opacity: 0.6;
+    transition: 0.2s;
+  }
 }
