@@ -1,12 +1,12 @@
 .container {
-  width: 280px;
+  width: calc(100% - 40px); // 280px
   margin: 0 auto;
 
   @media (min-width: @tablet) {
-    width: 708px;
+    width: calc(100% - 60px);
   }
 
   @media (min-width: @desktop) {
-    width: 1220px;
+    width: calc(100% - 220px);
   }
 }

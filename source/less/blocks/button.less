@@ -8,6 +8,15 @@
     background-color: @green;
     color: @white;
     padding: 14px 26px;
+
+    &:hover {
+      background-color: @green-hover;
+    }
+
+    &:active {
+      background-color: @green-hover;
+      color: fade(@white, 30);
+    }
   }
 
   &--wide {
@@ -21,5 +30,14 @@
   &--tertiary {
     background: @grey;
     color: @base-text-color;
+
+    &:hover,
+    &:active {
+      background-color: @special-grey-2;
+    }
+
+    &:active {
+      color: fade(@base-text-color, 30);
+    }
   }
 }

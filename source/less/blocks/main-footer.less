@@ -14,3 +14,37 @@
     justify-content: space-between;
   }
 }
+
+.main-footer__logo-2 {
+  @media (max-width: @only-mobile) {
+    padding-bottom: 20px;
+    border-bottom: 1px solid @grey85;
+    width: 280px;
+    text-align: center;
+  }
+
+  @media (min-width: @tablet) {
+    width: 142.8px;
+    height: 26.12px;
+  }
+}
+
+.main-footer__social {
+  padding: 20px 0;
+}
+
+.main-footer__logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: @only-mobile) {
+    width: 280px;
+    border-top: 1px solid @grey85;
+    padding-top: 20px;
+  }
+
+  @media (min-width: @tablet) {
+    width: 168px;
+  }
+}

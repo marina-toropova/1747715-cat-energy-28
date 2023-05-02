@@ -1,5 +1,6 @@
 .how-it-works-list {
   .list-reset;
+  counter-reset: my-counter;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -7,7 +8,8 @@
   @media (min-width: @tablet) {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 153px;
+    column-gap: 153px;
+    row-gap: 37px;
   }
 
   @media (min-width: @desktop) {

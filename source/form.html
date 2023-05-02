@@ -10,12 +10,12 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header main-header--line">
     <div class="main-header__container container">
       <div class="main-header__logo-wrapper">
 
-        <a href="#" class="main-header__logo logo">
-          <img src="img/logo-mobile.svg" width="33" height="38" alt="Логотип.">
+        <a href="index.html" class="main-header__logo logo">
+          <span class="visually-hidden">Логотип.</span>
         </a>
 
         <a href="#" class="main-header__logo-2 logo-2">
@@ -23,13 +23,13 @@
         </a>
       </div>
 
-      <nav class="main-header__nav nav">
+      <nav class="main-header__nav nav nav--closed nav--nojs">
 
-        <button class="nav__toggle button nav__button--closed" type="button">
+        <button class="nav__toggle button" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
-        <ul class="nav__list nav-list">
+        <ul class="nav__list nav-list nav-list--closed">
           <li class="nav__item">
             <a class="nav__link" href="index.html">главная</a>
           </li>
@@ -50,7 +50,7 @@
     <section class="program-selection">
       <div class="program-selection__wrapper container">
         <h1 class="program-selection__title title-secondary">Подбор программы</h1>
-        <p class="program-selection__text">Заполните анкету, и мы подберем
+        <p class="program-selection__text">Заполните анкету, и мы подберем <br>
           программу питания для вашего кота</p>
 
         <form class="program-selection__form programm-selection-form" action="https://echo.htmlacademy.ru/"
@@ -87,14 +87,14 @@
           </ul>
 
           <div class="program-selection-form__contact-details contact-details">
-            <h2 class="contact-details__title title-form">Контактные данные
+            <h2 class="contact-details__title title-form title-form--line">Контактные данные
               (владельца кота)</h2>
             <ul class="program-selection-form__list program-selection-list program-selection-form__list--contacts">
-              <li class="program-selection-form__item">
+              <li class="program-selection-form__item program-selection-form__item--email">
                 <label for="email">E-mail:*</label>
                 <input class="input" type="email" name="email" placeholder="kuklachev@gmail.com" id="email" required>
               </li>
-              <li class="program-selection-form__item">
+              <li class="program-selection-form__item program-selection-form__item--phone">
                 <label for="phone">Телефон:*</label>
                 <input class="input" type="tel" name="phone" placeholder="7" id="phone" required>
               </li>
@@ -119,16 +119,16 @@
                 <label for="sweetener">сахарозаменитель</label>
               </li>
               <li class="program-selection-form__item">
-                <input class="input" type="checkbox" name="drinking-water" value="weight-gain" id="weight-gain">
-                <label for="weight-gain">питьевая вода</label>
+                <input class="input" type="checkbox" name="drinking-water" value="weight-gain" id="drink-water">
+                <label for="drink-water">питьевая вода</label>
               </li>
               <li class="program-selection-form__item">
-                <input class="input" class="input" type="checkbox" name="dont-know" value="dont-know" id="dont-know">
-                <label for="dont-know">молоко</label>
+                <input class="input" class="input" type="checkbox" name="dont-know" value="dont-know" id="milk">
+                <label for="milk">молоко</label>
               </li>
               <li class="program-selection-form__item">
-                <input class="input" type="checkbox" name="dont-know" value="dont-know" id="dont-know">
-                <label for="dont-know">витамины</label>
+                <input class="input" type="checkbox" name="dont-know" value="dont-know" id="vitamins">
+                <label for="vitamins">витамины</label>
               </li>
             </ul>
             <div class="additionally_link-text-wrapper">
@@ -160,8 +160,8 @@
   <footer class="main-footer">
     <div class="main-footer__wrapper container">
 
-      <a href="#" class="main-footer__logo-2 logo-2">
-        <img class="logo-2__image" src="img/logo-2.svg" width="101" height="18" alt="Логотип Cat Energy.">
+      <a href="index.html" class="main-footer__logo-2 logo-2">
+        <img class="logo-2__image logo-2__image--big" src="img/logo-2.svg" width="101" height="18" alt="Логотип Cat Energy.">
       </a>
 
       <div class="main-footer__social social">
@@ -218,7 +218,7 @@
 
     </div>
   </footer>
-
+  <script src="js/script.js"></script>
 </body>
 
 </html>

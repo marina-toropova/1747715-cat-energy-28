@@ -8,13 +8,24 @@
 .gifts__container {
   background-color: @green;
   min-height: 290px;
-  background-image: url(../../img/gifts-background.jpg);
+  background-color: @green;
+  background-image: url("../../img/gifts-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 100%;
   margin-top: 35px;
+  position: relative;
+
+  @media (min-width: @tablet) {
+    margin-top: 69px;
+    margin-bottom: 76px;
+    min-height: 200px;
+  }
 
   @media (min-width: @desktop) {
     width: 245px;
+    min-height: 289px;
+    margin: 0;
   }
 }
 
@@ -25,4 +36,31 @@
   text-align: center;
   color: @white;
   margin: 0;
+
+  @media (min-width: @tablet) {
+    width: 161px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop) {
+    text-align: center;
+  }
+}
+
+.gifts__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding-top: 59px;
+
+  @media (min-width: @tablet) and (max-width: @desktop - 1px) {
+    flex-direction: row;
+    gap: 265px;
+  }
+
+  svg {
+    order: -1;
+  }
 }

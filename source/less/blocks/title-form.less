@@ -5,4 +5,29 @@
   line-height: 26px;
   color: @black;
   margin: 0;
+  background-color: @white;
+
+  &--line {
+    position: relative;
+  }
+
+  @media (min-width: @tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.title-form--line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100vw;
+  height: 2px;
+  background-color: @green;
+  z-index: -1;
+
+  @media (min-width: @tablet) {
+    left: 0;
+  }
 }
