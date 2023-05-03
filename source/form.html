@@ -48,7 +48,7 @@
   <main>
 
     <section class="program-selection">
-      <div class="program-selection__wrapper container">
+      <div class="program-selection__wrapper container container--form">
         <h1 class="program-selection__title title-secondary">Подбор программы</h1>
         <p class="program-selection__text">Заполните анкету, и мы подберем <br>
           программу питания для вашего кота</p>
@@ -73,16 +73,31 @@
 
           <ul class="program-selection-form__list program-selection-list program-selection-form__list--selection">
             <li class="program-selection-form__item program-selection-form__item--bright">
-              <input class="input" type="radio" name="weight-loss" value="weight-loss" id="weight-loss" checked>
-              <label for="weight-loss">похудение</label>
+
+              <label class="program-selection-form__label control" for="weight-loss">
+                <input class="control__input input visually-hidden" type="radio" name="weight" value="weight-loss" id="weight-loss" checked>
+                <span class="control__mark"></span>
+                <span class="control__label">похудение</span>
+              </label>
+
             </li>
             <li class="program-selection-form__item program-selection-form__item--bright">
-              <input class="input" type="radio" name="weight-gain" value="weight-gain" id="weight-gain">
-              <label for="weight-gain">Набор массы</label>
+
+              <label class="program-selection-form__label control" for="weight-gain">
+                <input class="control__input input visually-hidden" type="radio" name="weight" value="weight-gain" id="weight-gain">
+                <span class="control__mark"></span>
+                <span class="control__label">Набор массы</span>
+              </label>
+
             </li>
             <li class="program-selection-form__item program-selection-form__item--bright">
-              <input class="input" type="radio" name="dont-know" value="dont-know" id="dont-know">
-              <label for="dont-know">Не знаю (Нужен ваш совет)</label>
+
+
+              <label class="program-selection-form__label control" for="dont-know">
+                <input class="control__input input visually-hidden" type="radio" name="weight" value="dont-know" id="dont-know">
+                <span class="control__mark"></span>
+                <span class="control__label">Не знаю (Нужен ваш совет)</span>
+              </label>
             </li>
           </ul>
 
@@ -102,7 +117,7 @@
           </div>
 
           <div class="program-selection-form__comment comment">
-            <h2 class="comment__title title-form">
+            <h2 class="comment__title title-form title-form--line">
               Комментарий
             </h2>
             <label for="comment">
@@ -112,24 +127,51 @@
           </div>
 
           <div class="program-selection-form__additionally additionally">
-            <h2 class="additionally__title title-form">Дополнительно</h2>
+            <h2 class="additionally__title title-form title-form--line">Дополнительно</h2>
             <ul class="additionally__list program-selection-list">
+
               <li class="program-selection-form__item">
-                <input class="input" type="checkbox" name="sweetener" value="sweetener" id="sweetener" checked>
-                <label for="sweetener">сахарозаменитель</label>
+
+                <label class="program-selection-form__label control" for="sweetener">
+                  <input class="control__input input visually-hidden" type="checkbox" name="sweetener" value="sweetener" id="sweetener" checked>
+                  <span class="control__mark control__mark--checkbox"></span>
+                  <span class="control__label">сахарозаменитель</span>
+                </label>
+
               </li>
+
               <li class="program-selection-form__item">
-                <input class="input" type="checkbox" name="drinking-water" value="weight-gain" id="drink-water">
-                <label for="drink-water">питьевая вода</label>
+
+
+                <label class="program-selection-form__label control" for="drink-water">
+                  <input class="control__input input visually-hidden" type="checkbox" name="drinking-water" value="drinking-water" id="drink-water">
+                  <span class="control__mark control__mark--checkbox"></span>
+                  <span class="control__label">питьевая вода</span>
+                </label>
+
               </li>
+
               <li class="program-selection-form__item">
-                <input class="input" class="input" type="checkbox" name="dont-know" value="dont-know" id="milk">
-                <label for="milk">молоко</label>
+
+
+                <label class="program-selection-form__label control" for="milk">
+                  <input class="control__input input visually-hidden" class="input" type="checkbox" name="milk" value="milk" id="milk">
+                  <span class="control__mark control__mark--checkbox"></span>
+                  <span class="control__label">молоко</span>
+                </label>
+
               </li>
+
               <li class="program-selection-form__item">
-                <input class="input" type="checkbox" name="dont-know" value="dont-know" id="vitamins">
-                <label for="vitamins">витамины</label>
+
+                <label class="program-selection-form__label control" for="vitamins">
+                  <input class="control__input input visually-hidden" type="checkbox" name="vitamins" value="vitamins" id="vitamins">
+                  <span class="control__mark control__mark--checkbox"></span>
+                  <span class="control__label">витамины</span>
+                </label>
+
               </li>
+
             </ul>
             <div class="additionally_link-text-wrapper">
             <a class="additionally__link button button--wide button--primary" href="#">отправить заявку</a>

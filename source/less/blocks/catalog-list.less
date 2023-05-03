@@ -62,9 +62,10 @@
       content: "";
       position: absolute;
       height: 1px;
-      width: 100%;
+      width: 1000vw;
       background-color: @special-grey-2;
       top: 0;
+      left: -1000px;
     }
 
     &--show-more {
@@ -81,6 +82,20 @@
 
   @media (min-width: @tablet) {
     background-color: @grey;
+  }
+}
+
+.catalog-list__item-card:last-child {
+  @media (max-width: @tablet - 1px) {
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 1000vw;
+      background-color: @special-grey-2;
+      top: 0;
+      left: -1000px;
+    }
   }
 }
 

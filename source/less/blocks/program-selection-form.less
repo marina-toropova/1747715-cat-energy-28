@@ -47,11 +47,12 @@
 
 .program-selection-form__list.program-selection-form__list--selection {
   padding: 22px 0 19px;
+  row-gap: 25px;
 
   @media (min-width: @tablet) {
     padding: 25px 28px 29px;
-    gap: 13px;
     border: 1px solid @greyE7;
+    row-gap: 28px;
   }
 
   @media (min-width: @desktop) {
@@ -168,5 +169,15 @@
     height: 20px;
     background-image: url("../../img/icon-phone.svg");
     right: 15px;
+  }
+}
+
+.program-selection-form__label {
+  position: relative;
+  display: block;
+  padding-left: 45px;
+
+  @media (min-width:@tablet) {
+    padding-left: 60px;
   }
 }

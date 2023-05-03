@@ -42,6 +42,15 @@
   }
 }
 
+.nav__list {
+  @media (max-width: @tablet - 1px) {
+    width: 100vw;
+    left: -20px;
+    overflow-x: hidden;
+    min-height: 199px;
+  }
+}
+
 .nav__link {
   font-family: @oswald;
   font-style: normal;
@@ -97,14 +106,15 @@
 .nav__item {
   position: relative;
 
-  @media (max-width: @tablet) {
+  @media (max-width: @tablet - 1px) {
     &::before {
       content: "";
       position: absolute;
       height: 1px;
-      width: 100%;
+      width: 1000vw;
       background-color: @light-grey;
       display: block;
+      left: -1000%;
     }
   }
 
@@ -117,6 +127,20 @@
   &:nth-child(2) {
     @media (min-width: @tablet) {
       margin-right: 36px;
+    }
+  }
+
+  &:last-child {
+    @media (max-width: @tablet - 1px) {
+      &::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 1000vw;
+        background-color: @light-grey;
+        display: block;
+        left: -1000%;
+      }
     }
   }
 }
