@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Кэт энерджи. Подбор программы.</title>
 </head>
@@ -59,15 +61,15 @@
           <ul class="program-selection-form__list program-selection-list program-selection-form__list--name">
             <li class="program-selection-form__item">
               <label for="name">ИМЯ:*</label>
-              <input class="input" type="text" name="name" placeholder="барсик" required>
+              <input class="input" type="text" name="name" placeholder="барсик" id="name" required>
             </li>
             <li class="program-selection-form__item">
               <label for="weight">Вес (кг):*</label>
-              <input class="input" type="text" name="weight" placeholder="7" required>
+              <input class="input" type="text" name="weight" id="weight" placeholder="7" required>
             </li>
             <li class="program-selection-form__item">
               <label for="age">Возраст (лет):</label>
-              <input class="input" type="text" name="age" placeholder="7">
+              <input class="input" type="text" name="age" id="age" placeholder="7">
             </li>
           </ul>
 
@@ -107,11 +109,11 @@
             <ul class="program-selection-form__list program-selection-list program-selection-form__list--contacts">
               <li class="program-selection-form__item program-selection-form__item--email">
                 <label for="email">E-mail:*</label>
-                <input class="input" type="email" name="email" placeholder="kuklachev@gmail.com" id="email" required>
+                <input class="input input--email" type="email" name="email" placeholder="kuklachev@gmail.com" id="email" required>
               </li>
               <li class="program-selection-form__item program-selection-form__item--phone">
                 <label for="phone">Телефон:*</label>
-                <input class="input" type="tel" name="phone" placeholder="7" id="phone" required>
+                <input class="input input--phone" type="tel" name="phone" placeholder="7" id="phone" required>
               </li>
             </ul>
           </div>
@@ -155,7 +157,7 @@
 
 
                 <label class="program-selection-form__label control" for="milk">
-                  <input class="control__input input visually-hidden" class="input" type="checkbox" name="milk" value="milk" id="milk">
+                  <input class="control__input input visually-hidden" type="checkbox" name="milk" value="milk" id="milk">
                   <span class="control__mark control__mark--checkbox"></span>
                   <span class="control__label">молоко</span>
                 </label>
@@ -174,7 +176,7 @@
 
             </ul>
             <div class="additionally_link-text-wrapper">
-            <a class="additionally__link button button--wide button--primary" href="#">отправить заявку</a>
+            <button class="additionally__link button button--wide button--primary" type="submit" >отправить заявку</button>
             <span class="additionally__text">* — Обязательные поля</span>
           </div>
           </div>
@@ -191,11 +193,7 @@
           Конюшенная, д. 19/8
           Санкт-Петербург</p>
       </div>
-      <div class="contacts__map map">
-        <iframe
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3A33a6384a169da9fe6a874e10027292468fc4d78870f41401455554d19f120d8a&amp;source=constructor"
-          width="100%" height="362" frameborder="0"></iframe>
-      </div>
+      <div class="contacts__map map" data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A33a6384a169da9fe6a874e10027292468fc4d78870f41401455554d19f120d8a&amp;source=constructor"></div>
     </section>
   </main>
 

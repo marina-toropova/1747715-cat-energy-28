@@ -1,0 +1,16 @@
+.input,
+.textarea {
+  &:hover {
+    border-color: @another-grey;
+  }
+}
+
+.input:invalid:not(:placeholder-shown) {
+  outline: 2px solid @error; // положить в переменную, работает
+}
+
+/* Если не получается инвалидировать input - повесить на input класс .error */
+
+.input.error {
+  outline: 2px solid @error; // положить в переменную
+}

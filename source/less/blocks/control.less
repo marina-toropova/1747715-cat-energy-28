@@ -1,3 +1,7 @@
+.control:hover .control__mark {
+    border-color:#BABABA; // положить в переменную
+    ;
+}
 
 .control__mark {
   position: absolute;
@@ -42,10 +46,26 @@
   width: 18px;
   height: 14px;
   background-image: url("../../img/check-mark.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   content: "";
 
   @media (min-width: @tablet) {
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 19px;
+    top: 7px;
+    left: 7px;
   }
+}
+
+.control__input:disabled + .control__mark {
+  opacity: 0.3; // работает
+}
+
+.control__input:checked:disabled + .control__mark::before {
+  opacity: 0.3;
+}
+
+.control__input:focus + .control__mark {
+  outline: 2px solid #2D3440; // положить в переменную, проверить цвет
 }
