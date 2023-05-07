@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="../favicon.ico">
   <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="../manifest.webmanifest">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -57,14 +59,17 @@
         <h2 class="hero__title title-secondary title-secondary--light">Функциональное
           питание для котов</h2>
         <p class="hero__text">Занялся собой? Займись котом!</p>
-        <img class="hero__content-image" src="img/cat-energy-chicken.png"
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/cat-energy-chicken-tablet.png 1x, img/cat-energy-chicken-mobile@2x.jpg 2x">
+          <img class="hero__content-image" src="img/cat-energy-chicken.png"
+          srcset="img/cat-energy-chicken.png 1x, "
           alt="Питание для котов Cat Energy Pro с курицей." width="280" height="270">
+        </picture>
+
           <a href="#" class="hero__link button button--wide button--primary">подобрать программу</a>
         </div>
       </div>
-      <!-- <div class="hero__wrapper-link container">
 
-      </div> -->
     </section>
 
     <section class="services">
@@ -258,6 +263,5 @@
 
   <script src="js/script.js"></script>
 </body>
-
 
 </html>

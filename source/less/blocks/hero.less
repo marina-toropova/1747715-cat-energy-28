@@ -12,10 +12,15 @@
   min-height: 302px;
   background-color: @green;
   background: url("../../img/index-background-hero.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
+  background-size: 320px auto;
+  background-repeat-y: no-repeat;
   background-position-x: center;
   padding-top: 27px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/index-background-hero@2x.jpg");
+    background-size: 320px auto;
+  }
 
   @media (max-width: @tablet - 1px) {
     position: relative;
@@ -32,14 +37,18 @@
       width: 50%;
       height: 74%;
       background-color: @green;
-      background-image: url("../../img/index-background-hero.jpg");
+      background-image: url("../../img/green-cat-desktop.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       z-index: -1;
       top: 0;
       right: 0;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/green-cat-desktop@2x.jpg");
     }
   }
+}
 }
 
 .hero__inner-wrapper {
@@ -109,8 +118,8 @@
   }
 
   @media (min-width: @desktop) {
-    top: -66px;
+    top: -56px;
     left: 459px;
-    z-index: 0;
+    z-index: 2;
   }
 }
