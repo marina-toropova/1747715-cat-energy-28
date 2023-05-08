@@ -10,22 +10,39 @@
   min-height: 290px;
   background-color: @green;
   background-image: url("../../img/gifts-background.jpg");
-  background-repeat: no-repeat;
+  background-repeat-y: no-repeat;
   background-position: center;
   background-size: 100%;
   margin-top: 35px;
   position: relative;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/gifts-background@2x.jpg");
+    background-size: 280px auto;
+  }
+
   @media (min-width: @tablet) {
+    background-image: url("../../img/gifts-background-tablet.jpg");
     margin-top: 69px;
     margin-bottom: 76px;
     min-height: 200px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/gifts-background-tablet@2x.jpg");
+      background-size: 100% auto;
+    }
   }
 
   @media (min-width: @desktop) {
+    background-image: url("../../img/gifts-background-desktop.jpg");
     width: 245px;
     min-height: 289px;
     margin: 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/gifts-background-desktop@2x.jpg");
+      background-size: 100% auto;
+    }
   }
 }
 
