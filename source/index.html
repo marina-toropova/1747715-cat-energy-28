@@ -164,7 +164,26 @@
           </div>
         <span class="examples__summary">Затраты на питание: <span class="examples__summary-cost">15 000 РУБ.</span></span>
         <div class="examples__slider slider">
-          <img class="slider__image" src="img/cat-before.png" alt="Кот до и после." width="260" height="256">
+
+          <div class="examples__image examples__image--before">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/cat-before-tablet.png 1x, img/cat-before-tablet@2x.png 2x">
+              <img class="slider__image" src="img/cat-before.png"
+              srcset="img/cat-before@2x.png 2x"
+               alt="Кот до и после." width="260" height="256">
+            </picture>
+          </div>
+
+          <div class="examples__image examples__image--after">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/cat-after-tablet.png 1x, img/cat-after-tablet@2x.png 2x">
+              <img class="slider__image" src="img/cat-after.png"
+              srcset="img/cat-after@2x.png 2x"
+               alt="Кот до и после." width="260" height="256">
+            </picture>
+          </div>
+
+
         </div>
 
       </div>

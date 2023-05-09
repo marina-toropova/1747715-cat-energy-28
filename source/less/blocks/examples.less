@@ -164,6 +164,7 @@
 
 .examples__slider {
   grid-area: slider;
+  position: relative;
 
   @media (min-width: @tablet) {
     justify-self: center;
@@ -178,4 +179,9 @@
   @media (min-width: @tablet) {
     column-gap: 42px;
   }
+}
+
+.examples__image--before {
+  position: absolute;
+  z-index: -1;
 }
