@@ -164,7 +164,10 @@
 
 .examples__slider {
   grid-area: slider;
+  overflow: hidden;
+  display: flex;
   position: relative;
+  margin-top: 20px;
 
   @media (min-width: @tablet) {
     justify-self: center;
@@ -181,7 +184,73 @@
   }
 }
 
-.examples__image--before {
+.examples__image {
+  position: relative;
+  overflow: hidden;
+  width: 280px;
+  height: 256px;
+
+  @media (min-width: @tablet) {
+    width: 560px;
+    height: 688px;
+  }
+}
+
+.slider__image {
   position: absolute;
-  z-index: -1;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  min-width: 280px;
+  min-height: 256px;
+  object-fit: cover;
+
+  @media (min-width: @tablet) {
+    min-width: 560px;
+    min-height: 512px;
+  }
+
+  &--before {
+    left: 100%;
+  }
+
+  &--after {
+    left: 0;
+  }
+}
+
+.examples__button {
+  position: absolute;
+  width: 4px;
+  height: 257px;
+  background-color: #666666;
+  border-color: #666666;
+  border-radius: 2px;
+  left: 50%;
+
+  @media (min-width: @tablet) {
+    height: 512px;
+    bottom: 0;
+  }
+
+  &:hover {
+    background-color: @green;
+    border-color: @green;
+
+    .examples__button::before {
+      border-color: @green;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    z-index: 3;
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #666666;
+    background-color: #ffffff;
+    top: 50%;
+    margin-left: -18px;
+  }
 }
