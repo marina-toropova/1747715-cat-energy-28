@@ -226,6 +226,7 @@
   border-color: @socials-grey;
   border-radius: 2px;
   left: 50%;
+  cursor: pointer;
 
   @media (min-width: @tablet) {
     height: 512px;
@@ -235,10 +236,6 @@
   &:hover {
     background-color: @green;
     border-color: @green;
-
-    .examples__button::before {
-      border-color: @green; //не работает
-    }
   }
 
   &:active {
@@ -256,10 +253,15 @@
     border-radius: 50%;
     border: 2px solid @socials-grey;
     background-color: @white;
-    background-image: url("../../img/button-arrows.svg");
+    background-image: url("../../img/thumb.svg");
     background-repeat: no-repeat;
     background-position: center;
     top: 50%;
     margin-left: -18px;
   }
+}
+
+.examples__button:hover::before {
+  background-image: url("../../img/thumb-hover.svg");
+  border-color: @green;
 }
