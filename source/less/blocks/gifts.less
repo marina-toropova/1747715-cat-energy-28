@@ -12,13 +12,16 @@
 .gifts__container {
   background-color: @green;
   min-height: 290px;
+  /* stylelint-disable */
   background-color: @green;
+  /* stylelint-enable */
   background-image: url("../../img/gifts-background.jpg");
   background-repeat-y: no-repeat;
   background-position: center;
   background-size: 100%;
   margin-top: 35px;
   position: relative;
+  padding: 187px 61px 43px 48px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../../img/gifts-background@2x.jpg");
@@ -30,6 +33,7 @@
     margin-top: 69px;
     margin-bottom: 76px;
     min-height: 200px;
+    padding: 71px 124px 69px 422px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/gifts-background-tablet@2x.jpg");
@@ -42,6 +46,7 @@
     width: 245px;
     min-height: 289px;
     margin: 0;
+    padding: 184px 43px 42px 40px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/gifts-background-desktop@2x.jpg");
@@ -57,6 +62,8 @@
   text-align: center;
   color: @white;
   margin: 0;
+  position: relative;
+  width: 161px;
 
   @media (min-width: @tablet) {
     width: 161px;
@@ -68,20 +75,41 @@
   }
 }
 
+.gifts__title::before {
+  content: "";
+  width: 78px;
+  height: 80px;
+  position: absolute;
+  background-image: url("../../icons/stack.svg#gifts");
+  top: -128px;
+  left: 26%;
+
+  @media (min-width: @tablet) {
+    width: 80px;
+    height: 82px;
+    top: -14px;
+    left: -265px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 80px;
+    height: 82px;
+    top: -108px;
+    left: 26%;
+  }
+}
+
 .gifts__link {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 48px;
-  padding-top: 59px;
 
+  /* stylelint-disable-next-line selector-type-no-unknown */
   @media (min-width: @tablet) and (max-width: @desktop - 1px) {
     flex-direction: row;
     gap: 265px;
-  }
-
-  svg {
-    order: -1;
+    padding: 0;
   }
 }

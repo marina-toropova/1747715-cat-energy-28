@@ -1,6 +1,5 @@
 .control:hover .control__mark {
-    border-color:#BABABA; // положить в переменную
-    ;
+  border-color: @control-hover-grey;
 }
 
 .control__mark {
@@ -59,7 +58,7 @@
 }
 
 .control__input:disabled + .control__mark {
-  opacity: 0.3; // работает
+  opacity: 0.3;
 }
 
 .control__input:checked:disabled + .control__mark::before {
@@ -67,5 +66,5 @@
 }
 
 .control__input:focus + .control__mark {
-  outline: 2px solid #2D3440; // положить в переменную, проверить цвет
+  outline: 2px solid @light-black;
 }
