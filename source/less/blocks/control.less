@@ -1,0 +1,70 @@
+.control:hover .control__mark {
+  border-color: @control-hover-grey;
+}
+
+.control__mark {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @another-grey;
+  border-radius: 50%;
+
+  @media (min-width: @tablet) {
+    width: 40px;
+    height: 40px;
+    top: -8px;
+  }
+}
+
+.control__mark--checkbox {
+  border-radius: 0%;
+}
+
+.control__input[type="radio"]:checked + .control__mark::before {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 13px;
+  height: 13px;
+  background-color: @green;
+  border-radius: 50%;
+  content: "";
+
+  @media (min-width: @tablet) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.control__input[type="checkbox"]:checked + .control__mark::before {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 18px;
+  height: 14px;
+  background-image: url("../../img/check-mark.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+
+  @media (min-width: @tablet) {
+    width: 24px;
+    height: 19px;
+    top: 7px;
+    left: 7px;
+  }
+}
+
+.control__input:disabled + .control__mark {
+  opacity: 0.3;
+}
+
+.control__input:checked:disabled + .control__mark::before {
+  opacity: 0.3;
+}
+
+.control__input:focus + .control__mark {
+  outline: 2px solid @light-black;
+}

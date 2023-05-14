@@ -34,9 +34,10 @@
   &::after {
     position: absolute;
     content: "";
-    width: 32px;
-    height: 10px;
-    background-image: url("../../img/arrow-right.svg");
+    width: 24px;
+    height: 12px;
+    background-color: @black;
+    mask-image: url("../../icons/stack.svg#arrow-right");
     margin-left: 15px;
 
     @media (min-width: @tablet) {
@@ -44,4 +45,13 @@
       top: 9px;
     }
   }
+}
+
+.services__link:hover::after {
+  width: 32px;
+  mask-image: url("../../icons/stack.svg#arrow-right-hover");
+}
+
+.services__link:active {
+  opacity: 0.3;
 }

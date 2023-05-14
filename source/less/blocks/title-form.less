@@ -26,8 +26,18 @@
   height: 2px;
   background-color: @green;
   z-index: -1;
+}
 
+.title-form--line::before {
   @media (min-width: @tablet) {
-    left: 0;
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100vw;
+    height: 2px;
+    background-color: @green;
+    z-index: -1;
+    left: -100%;
   }
 }

@@ -13,3 +13,33 @@
   align-items: center;
   justify-content: center;
 }
+
+.social__link {
+  width: 28px;
+  height: 22px;
+  display: block;
+
+  &--vkontakte {
+    mask-image: url("../../icons/stack.svg#vkontakte");
+    background-color: @socials-grey;
+  }
+
+  &--youtube {
+    mask-image: url("../../icons/stack.svg#youtube");
+    background-color: @socials-grey;
+  }
+
+  &--telegram {
+    mask-image: url("../../icons/stack.svg#telegram");
+    background-color: @socials-grey;
+  }
+
+  &:hover {
+    background-color: @green;
+  }
+
+  &:active {
+    background-color: @green;
+    opacity: 0.3;
+  }
+}

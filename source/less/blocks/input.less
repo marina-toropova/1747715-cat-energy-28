@@ -1,0 +1,20 @@
+.input,
+.textarea {
+  &:hover {
+    border-color: @another-grey;
+  }
+}
+
+.input--email:hover + .program-selection-form__item--email::after {
+  background-color: @green;
+}
+
+.input:invalid:not(:placeholder-shown) {
+  outline: 2px solid @error; // положить в переменную, работает
+}
+
+/* Если не получается инвалидировать input - повесить на input класс .error */
+
+.input.error {
+  outline: 2px solid @error; // положить в переменную
+}

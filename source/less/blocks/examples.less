@@ -164,6 +164,10 @@
 
 .examples__slider {
   grid-area: slider;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  margin-top: 20px;
 
   @media (min-width: @tablet) {
     justify-self: center;
@@ -178,4 +182,91 @@
   @media (min-width: @tablet) {
     column-gap: 42px;
   }
+}
+
+.examples__image {
+  position: relative;
+  overflow: hidden;
+  width: 280px;
+  height: 256px;
+
+  @media (min-width: @tablet) {
+    width: 560px;
+    height: 688px;
+  }
+}
+
+.slider__image {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 280px;
+  min-height: 256px;
+  object-fit: cover;
+
+  @media (min-width: @tablet) {
+    min-width: 560px;
+    min-height: 512px;
+  }
+
+  &--before {
+    left: 100%;
+  }
+
+  &--after {
+    left: 0;
+  }
+}
+
+.examples__button {
+  position: absolute;
+  width: 4px;
+  height: 257px;
+  background-color: @socials-grey;
+  border-color: @socials-grey;
+  border-radius: 2px;
+  left: 50%;
+  cursor: pointer;
+
+  @media (min-width: @tablet) {
+    height: 512px;
+    bottom: 0;
+  }
+
+  &:hover {
+    background-color: @green;
+    border-color: @green;
+  }
+
+  &:active {
+    background-color: @green;
+    border-color: @green;
+    opacity: 0.6;
+  }
+
+  &::before {
+    position: absolute;
+    z-index: 3;
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid @socials-grey;
+    background-color: @white;
+    background-image: url("../../img/thumb.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    margin-left: -18px;
+  }
+}
+
+.examples__button:hover::before {
+  background-image: url("../../img/thumb-hover.svg");
+  border-color: @green;
+}
+
+.examples__button:active::before {
+  background-image: url("../../img/thumb-hover.svg");
+  border-color: @green;
 }
