@@ -219,7 +219,6 @@
 }
 
 .examples__button {
-  position: absolute;
   width: 4px;
   height: 257px;
   background-color: @socials-grey;
@@ -231,6 +230,7 @@
   @media (min-width: @tablet) {
     height: 512px;
     bottom: 0;
+    align-self: flex-end;
   }
 
   &:hover {
@@ -258,6 +258,10 @@
     background-position: center;
     top: 50%;
     margin-left: -18px;
+
+    @media (min-width: @tablet) {
+      top: 50vh;
+    }
   }
 }
 
