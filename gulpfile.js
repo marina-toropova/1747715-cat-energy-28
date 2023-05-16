@@ -7,7 +7,7 @@ import rename from 'gulp-rename';
 import autoprefixer from 'autoprefixer';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
-import { stacksvg } from "gulp-stacksvg"
+import { stacksvg } from 'gulp-stacksvg';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 import del from 'del';
@@ -22,7 +22,7 @@ export const styles = () => {
       autoprefixer(),
       csso()
     ]))
-    .pipe(rename("style.min.css"))
+    .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
