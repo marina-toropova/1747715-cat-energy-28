@@ -53,7 +53,7 @@
   padding: 39px 0 28px;
 
   @media (min-width: @tablet) {
-    padding: 66px 0 72px;
+    padding: 66px 0 77px;
   }
 
   @media (min-width: @desktop) {
@@ -68,7 +68,7 @@
   @media (min-width: @tablet) {
     padding: 25px 28px 29px;
     border: 1px solid @greyE7;
-    row-gap: 28px;
+    row-gap: 23px;
   }
 
   @media (min-width: @desktop) {
@@ -121,7 +121,7 @@
   padding-top: 30px;
 
   @media (min-width: @tablet) {
-    padding-top: 71px;
+    padding-top: 74px;
   }
 
   @media (min-width: @desktop) {
@@ -134,7 +134,7 @@
   padding: 23px 0 19px;
 
   @media (min-width: @tablet) {
-    padding: 65px 0;
+    padding: 65px 0 61px;
   }
 
   @media (min-width: @desktop) {
@@ -217,8 +217,10 @@
 }
 
 .program-selection-form__item--weight label {
-  @media (max-width: @only-mobile) {
-    min-width: 60px;
+  min-width: 60px;
+
+  @media (min-width: @tablet) {
+    width: 90px;
   }
 }
 
@@ -226,16 +228,24 @@
   @media (max-width: @only-mobile) {
     width: 167px;
   }
+
+  @media (min-width: @tablet) {
+    width: 167px;
+  }
+}
+
+.program-selection-form__item--age input {
+  @media (min-width: @tablet) {
+    margin-left: -13px;
+  }
 }
 
 .program-selection-form__item--email label {
   @media (max-width: @only-mobile) {
     width: 69px;
   }
-}
 
-.program-selection-form__comment .title-form--line::before {
-  @media (max-width: @only-mobile) {
-    top: 62%;
+  @media (min-width: @tablet) {
+    width: 75px;
   }
 }
