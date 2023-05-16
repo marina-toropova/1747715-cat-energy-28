@@ -12,6 +12,7 @@
 
   @media (min-width: @tablet) {
     padding-left: 0;
+    margin-top: 32px;
   }
 }
 
@@ -35,7 +36,7 @@
     @media (min-width: @tablet) {
       width: 80px;
       height: 80px;
-      top: 48px;
+      top: 40px;
       left: 0;
     }
   }
@@ -77,5 +78,23 @@
 .how-it-works__text {
   @media (max-width: @tablet - 1px) {
     max-width: 253px;
+  }
+}
+
+.how-it-works__item--tub .how-it-works__text {
+  @media (min-width: @tablet) {
+    min-width: 219px;
+  }
+}
+
+.how-it-works__item--alarm .how-it-works__text {
+  @media (min-width: @tablet) {
+    min-width: 254px;
+  }
+}
+
+.how-it-works__item--alarm br {
+  @media (max-width: @only-mobile) {
+    display: none;
   }
 }

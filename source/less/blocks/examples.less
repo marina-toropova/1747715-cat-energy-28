@@ -35,7 +35,7 @@
     "slider slider";
 
   @media (min-width: @tablet) {
-    padding: 43px 0 100px;
+    padding: 43px 0 32px;
     grid-template-rows: auto auto 54px auto auto;
     grid-template-columns: auto auto 174px;
     grid-template-areas: "heading heading heading"
@@ -101,7 +101,7 @@
       line-height: 14px;
       width: auto;
       padding: 0 10px;
-      bottom: -6px;
+      bottom: -10px;
     }
 
     @media (min-width: @desktop) {
@@ -131,6 +131,12 @@
     margin-top: 0;
     font-size: 20px;
     text-align: end;
+    align-self: center;
+
+    .examples__summary-cost {
+      margin-top: 8px;
+      display: block;
+    }
   }
 
   @media (min-width: @desktop) {
@@ -171,6 +177,7 @@
 
   @media (min-width: @tablet) {
     justify-self: center;
+    margin-top: 0;
   }
 }
 
@@ -229,7 +236,7 @@
 
   @media (min-width: @tablet) {
     height: 512px;
-    bottom: 0;
+    margin-bottom: 68px;
     align-self: flex-end;
   }
 
@@ -260,7 +267,7 @@
     margin-left: -18px;
 
     @media (min-width: @tablet) {
-      top: 50vh;
+      top: 50%;
     }
   }
 }
