@@ -21,7 +21,7 @@
 }
 
 .additionally__list {
-  margin-top: 34px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   row-gap: 25px;
@@ -54,7 +54,7 @@
 }
 
 .additionally_link-text-wrapper {
-  margin-top: 34px;
+  margin-top: 38px;
   display: flex;
   flex-direction: column;
   gap: 21px;
@@ -78,5 +78,11 @@
     width: 291px;
     padding-left: 39px;
     left: -39px;
+  }
+
+  &::after {
+    @media (max-width: @only-mobile) {
+      top: 61%;
+    }
   }
 }

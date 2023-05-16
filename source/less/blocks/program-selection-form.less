@@ -29,7 +29,7 @@
         height: 1px;
         width: 1000vw;
         background-color: @special-grey-2;
-        top: 0;
+        top: -8px;
         left: -1000px;
       }
 
@@ -50,7 +50,7 @@
 }
 
 .program-selection-form__list.program-selection-form__list--name {
-  padding: 39px 0 24px;
+  padding: 39px 0 28px;
 
   @media (min-width: @tablet) {
     padding: 66px 0 72px;
@@ -118,7 +118,7 @@
 }
 
 .program-selection-form__contact-details {
-  padding-top: 26px;
+  padding-top: 30px;
 
   @media (min-width: @tablet) {
     padding-top: 71px;
@@ -131,7 +131,7 @@
 }
 
 .program-selection-form__comment {
-  padding: 23px 0;
+  padding: 23px 0 19px;
 
   @media (min-width: @tablet) {
     padding: 65px 0;
@@ -144,7 +144,7 @@
 
   textarea {
     width: 100%;
-    padding: 10px 12px 10px 15px;
+    padding: 5px 12px 10px 15px;
 
     @media (min-width: @tablet) {
       padding: 10px 19px;
@@ -152,6 +152,12 @@
 
     &::placeholder {
       .text-input;
+    }
+  }
+
+  .title-form--line::after {
+    @media (max-width: @only-mobile) {
+      top: 61%;
     }
   }
 }
@@ -208,4 +214,28 @@
 
 .program-selection-form__item--phone:focus::after {
   background-color: @green; // не работает
+}
+
+.program-selection-form__item--weight label {
+  @media (max-width: @only-mobile) {
+    min-width: 60px;
+  }
+}
+
+.program-selection-form__item--age label {
+  @media (max-width: @only-mobile) {
+    width: 167px;
+  }
+}
+
+.program-selection-form__item--email label {
+  @media (max-width: @only-mobile) {
+    width: 69px;
+  }
+}
+
+.program-selection-form__comment .title-form--line::before {
+  @media (max-width: @only-mobile) {
+    top: 62%;
+  }
 }
