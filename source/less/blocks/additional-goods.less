@@ -9,6 +9,10 @@
 
 .additional-goods__container {
   flex-grow: 1;
+
+  @media (min-width: @desktop) {
+    padding-left: 10px;
+  }
 }
 
 .additional-goods__wrapper {
@@ -36,6 +40,8 @@
 
   @media (min-width: @desktop) {
     margin: 0;
+    padding: 74px 36px 80px;
+    margin-left: -37px;
   }
 }
 
@@ -47,7 +53,7 @@
   @media (min-width: @tablet) {
     content: "";
     position: absolute;
-    top: 88px;
+    top: 98px;
     transform: translateY(-50%);
     width: 100vw;
     height: 2px;
@@ -61,7 +67,7 @@
   @media (min-width: @tablet) {
     content: "";
     position: absolute;
-    top: 88px;
+    top: 98px;
     transform: translateY(-50%);
     width: 100vw;
     height: 2px;
@@ -69,4 +75,3 @@
     z-index: -1;
   }
 }
-

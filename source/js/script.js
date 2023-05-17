@@ -27,3 +27,40 @@ window.addEventListener('load', function() {
   map.innerHTML = '<iframe src="'+map.getAttribute('data-src')+'" width="100%" height="'+mapHeight+'" frameborder="0"></iframe>';
 });
 
+// Фокус поля формы с почтой
+
+let emailInput = document.querySelector(".input--email");
+
+emailInput.addEventListener('focus', function() {
+    let programItem = document.querySelector(".program-selection-form__item--email");
+  programItem.classList.add("program-selection-form__item--email--focus");
+
+  if (emailInput.classList.contains('error')) {
+    let programItem = document.querySelector(".program-selection-form__item--email");
+    programItem.classList.add("program-selection-form__item--email--error");
+  }
+});
+
+emailInput.addEventListener('blur', function() {
+    let programItem = document.querySelector(".program-selection-form__item--email");
+  programItem.classList.remove("program-selection-form__item--email--focus");
+});
+
+// Фокус поля формы с телефоном
+
+let phoneInput = document.querySelector(".input--phone");
+
+phoneInput.addEventListener('focus', function() {
+    let programItem = document.querySelector(".program-selection-form__item--phone");
+  programItem.classList.add("program-selection-form__item--phone--focus");
+
+  if (phoneInput.classList.contains('error')) {
+    let programItem = document.querySelector(".program-selection-form__item--phone");
+    programItem.classList.add("program-selection-form__item--phone--error");
+  }
+});
+
+phoneInput.addEventListener('blur', function() {
+    let programItem = document.querySelector(".program-selection-form__item--phone");
+  programItem.classList.remove("program-selection-form__item--phone--focus");
+});

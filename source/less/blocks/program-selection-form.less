@@ -41,11 +41,11 @@
   }
 
   &--contacts {
-      @media (min-width: @desktop) {
+    @media (min-width: @desktop) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 80px;
-      }
+    }
   }
 }
 
@@ -72,7 +72,7 @@
   }
 
   @media (min-width: @desktop) {
-    padding: 25px 28px;
+    padding: 30px 28px;
   }
 
   input {
@@ -138,7 +138,7 @@
   }
 
   @media (min-width: @desktop) {
-    padding: 67px 0;
+    padding: 67px 0 62px;
     grid-area: comment;
   }
 
@@ -248,4 +248,26 @@
   @media (min-width: @tablet) {
     width: 75px;
   }
+}
+
+.program-selection-form__item--email--focus::after {
+  background-color: @green;
+}
+
+.program-selection-form__item--phone--focus::after {
+  background-color: @green;
+}
+
+.input--email:invalid + .program-selection-form__item--email::after {
+  background-color: @error;
+}
+
+// Если не удается инвалидировать форму, то добавить класс пункту списка .program-selection-form__item--email
+
+.program-selection-form__item--email--error::after {
+  background-color: @error;
+}
+
+.program-selection-form__item--phone--error::after {
+  background-color: @error;
 }

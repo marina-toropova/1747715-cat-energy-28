@@ -73,9 +73,9 @@ export const svg = () =>
   .pipe(gulp.dest('build/img/'));
 
 export const makeStack = () => {
-	return gulp.src(['source/icons/**/*.svg', '!source/icons/stack.svg'])
-		.pipe(stacksvg({ output: 'stack' }))
-		.pipe(gulp.dest('build/icons'))
+ return gulp.src(['source/icons/**/*.svg', '!source/icons/stack.svg'])
+  .pipe(stacksvg({ output: 'stack' }))
+  .pipe(gulp.dest('build/icons'))
 }
 
 // Copy

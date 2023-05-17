@@ -7,6 +7,12 @@
     position: relative;
   }
 
+  @media (min-width: @tablet) {
+    background-color: inherit;
+    border-top: transparent;
+    position: relative;
+  }
+
   &::after {
     @media (min-width: @tablet) {
       content: "";
@@ -173,8 +179,6 @@
       display: block;
     }
   }
-
-
 }
 
 .examples__title {
