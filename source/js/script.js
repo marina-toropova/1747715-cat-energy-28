@@ -36,8 +36,8 @@ emailInput.addEventListener('focus', function() {
   programItem.classList.add("program-selection-form__item--email--focus");
 
   if (emailInput.classList.contains('error')) {
-    let programItem = document.querySelector(".program-selection-form__item--email");
-    programItem.classList.add("program-selection-form__item--email--error");
+    let programItem = document.querySelector(".program-selection-form__item");
+    programItem.classList.add("program-selection-form__item--error");
   }
 });
 
@@ -55,8 +55,8 @@ phoneInput.addEventListener('focus', function() {
   programItem.classList.add("program-selection-form__item--phone--focus");
 
   if (phoneInput.classList.contains('error')) {
-    let programItem = document.querySelector(".program-selection-form__item--phone");
-    programItem.classList.add("program-selection-form__item--phone--error");
+    let programItem = document.querySelector(".program-selection-form__item");
+    programItem.classList.add("program-selection-form__item--error");
   }
 });
 
