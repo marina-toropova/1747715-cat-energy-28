@@ -22,7 +22,6 @@
   @media (min-resolution: 2dppx) {
     background-image: url("../img/index-background-hero@2x.jpg");
     background-size: 320px auto;
-    padding-top: 46px;
   }
 
   @media (max-width: @tablet - 1px) {
@@ -31,16 +30,17 @@
 
   @media (min-width: @tablet) {
     background-image: none;
+    padding-top: 46px;
   }
 
   @media (min-width: @desktop) {
-    padding-top: 95px;
+    padding-top: 93px;
 
     &::after {
       content: "";
       position: absolute;
-      width: 49.4%;
-      height: 72.2%;
+      width: 49.9%;
+      height: 72.3%;
       background-color: @green;
       background-image: url("../img/green-cat-desktop.jpg");
       background-repeat: no-repeat;
@@ -68,7 +68,7 @@
 
   @media (min-width: @desktop) {
     margin-right: auto;
-    padding-left: 80px;
+    padding-left: 81px;
   }
 }
 

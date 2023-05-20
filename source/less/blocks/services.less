@@ -18,7 +18,7 @@
   }
 
   @media (min-width: @desktop) {
-    padding: 73px 0 23px;
+    padding: 73px 0 29px;
     width: auto;
   }
 }
@@ -34,8 +34,8 @@
   &::after {
     position: absolute;
     content: "";
-    width: 24px;
-    height: 12px;
+    width: 32px;
+    height: 21px;
     background-color: @black;
     mask-image: url("../icons/stack.svg#arrow-right");
     margin-left: 15px;
@@ -54,4 +54,14 @@
 
 .services__link:active {
   opacity: 0.3;
+}
+
+.services__title.title-services {
+  @media (max-width: @only-mobile) {
+    margin-left: 14px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-left: 35px;
+  }
 }
