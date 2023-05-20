@@ -64,3 +64,81 @@ phoneInput.addEventListener('blur', function() {
     let programItem = document.querySelector(".program-selection-form__item--phone");
   programItem.classList.remove("program-selection-form__item--phone--focus");
 });
+
+// Ошибка поля ввода имени
+
+const nameField = document.getElementById("name");
+
+nameField.addEventListener("input", function () {
+  const invalidName = document.querySelector(".input--name:invalid");
+
+  if (invalidName) {
+    if (!nameField.classList.contains("error")) {
+      nameField.classList.add("error");
+    }
+  } else {
+    if (nameField.classList.contains("error")) {
+      nameField.classList.remove("error");
+    }
+  }
+});
+
+// Ошибка поля ввода веса
+
+const weightField = document.getElementById("weight");
+
+weightField.addEventListener("input", function () {
+  const invalidWeight = document.querySelector(".input--weight:invalid");
+
+  if (invalidWeight) {
+    if (!weightField.classList.contains("error")) {
+      weightField.classList.add("error");
+    }
+  } else {
+    if (weightField.classList.contains("error")) {
+      weightField.classList.remove("error");
+    }
+  }
+});
+
+// Ошибка поля ввода email
+
+const emailField = document.getElementById("email");
+const emailError = document.querySelector('.program-selection-form__item--email');
+
+emailField.addEventListener("input", function () {
+  const invalidEmail = document.querySelector(".input--email:invalid");
+
+  if (invalidEmail) {
+    if (!emailField.classList.contains("error")) {
+      emailField.classList.add("error");
+      emailError.classList.add("program-selection-form__item--error");
+    }
+  } else {
+    if (emailField.classList.contains("error")) {
+      emailField.classList.remove("error");
+      emailError.classList.remove("program-selection-form__item--error");
+    }
+  }
+});
+
+// Ошибка поля ввода phone
+
+const phoneField = document.getElementById("phone");
+const phoneError = document.querySelector('.program-selection-form__item--phone');
+
+phoneField.addEventListener("input", function () {
+
+  const invalidPhone = document.querySelector(".input--phone:invalid");
+  if (invalidPhone) {
+    if (!phoneField.classList.contains("error")) {
+      phoneField.classList.add("error");
+      phoneError.classList.add("program-selection-form__item--error");
+    }
+  } else {
+    if (phoneField.classList.contains("error")) {
+      phoneField.classList.remove("error");
+      phoneError.classList.remove("program-selection-form__item--error");
+    }
+  }
+});

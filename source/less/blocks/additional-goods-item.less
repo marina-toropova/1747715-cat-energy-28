@@ -18,8 +18,8 @@
   @media (min-width: @desktop) {
     border-left: none;
     border-right: none;
-    padding: 15px 0;
-    grid-template-columns: 37% 32% 4% 28%;
+    padding: 15.4px 0;
+    grid-template-columns: 36% 32% 4.3% 28%;
     grid-template-areas: "heading text . link";
     align-items: center;
   }
@@ -37,6 +37,10 @@
     line-height: 20px;
     grid-area: heading;
   }
+
+  @media (min-width: @desktop) {
+    margin-left: -8px;
+  }
 }
 
 .additional-goods-item__text-wrapper {
@@ -52,7 +56,8 @@
   }
 
   @media (min-width: @desktop) {
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 193px 42px;
   }
 }
 
@@ -61,3 +66,10 @@
     grid-area: link;
   }
 }
+
+.additional-goods-item__description {
+  @media (min-width: @desktop) {
+    justify-self: flex-start;
+  }
+}
+
