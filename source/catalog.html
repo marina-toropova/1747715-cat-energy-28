@@ -5,11 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/lato/lato-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswald-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswald-medium.woff2" as="font" crossorigin="anonymous">
   <link rel="icon" href="../favicon.ico">
   <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="../manifest.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Кэт энерджи. Каталог.</title>
 </head>
 
@@ -19,12 +22,19 @@
     <div class="main-header__container container">
       <div class="main-header__logo-wrapper">
 
-        <a href="index.html" class="main-header__logo logo">
-          <span class="visually-hidden">Логотип.</span>
+        <a href="#" class="main-header__logo logo">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="71" height="60">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="61" height="50">
+            <img src="img/logo-mobile.svg" alt="Логотип Cat Energy." width="33" height="38">
+          </picture>
         </a>
 
         <a href="#" class="main-header__logo-2 logo-2">
-          <img src="img/logo-2.svg" width="101" height="18" alt="Логотип Cat Energy.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-2-desktop.svg" width="119" height="33">
+            <img src="img/logo-2.svg" width="101" height="18" alt="Логотип Cat Energy.">
+          </picture>
         </a>
       </div>
 
@@ -61,8 +71,10 @@
 
           <a class="catalog-list__image-link catalog-list-image-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-energy-pro-chicken-500-tablet.webp 1x, img/cat-energy-pro-chicken-500-tablet@2x.webp 2x" width="161" height="172">
+              <source type="image/webp" srcset="img/cat-energy-pro-chicken-500.webp 1x, img/cat-energy-pro-chicken-500@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/cat-energy-pro-chicken-500-tablet.png 1x, img/cat-energy-pro-chicken-500-tablet@2x.png 2x" width="161" height="172">
-              <img class="catalog-list-image-link__image" src="img/cat-energy-pro-chicken-500.jpg"
+              <img class="catalog-list-image-link__image" loading="lazy" src="img/cat-energy-pro-chicken-500.jpg"
               srcset="img/cat-energy-pro-chicken-500@2x.jpg 2x"
                 alt="Питание Cat Energy PRO с курицей, 500 грамм." width="68" height="86">
             </picture>
@@ -93,9 +105,13 @@
 
           <a class="catalog-list__image-link catalog-list-image-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/cat-energy-pro-chicken-1000-desktop.webp 1x, img/cat-energy-pro-chicken-1000-desktop@2x.webp 2x" width="172" height="196">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-energy-pro-chicken-1000-tablet.webp 1x, img/cat-energy-pro-chicken-1000-tablet@2x.webp 2x" width="168" height="206">
+              <source type="image/webp" srcset="img/catalog-pro-chicken-1000.webp 1x, img/catalog-pro-chicken-1000@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/cat-energy-pro-chicken-1000-desktop.png 1x, img/cat-energy-pro-chicken-1000-desktop@2x.png 2x" width="172" height="196">
               <source media="(min-width: 768px)" srcset="img/cat-energy-pro-chicken-1000-tablet.png 1x, img/cat-energy-pro-chicken-1000-tablet@2x.png 2x" width="168" height="206">
-              <img class="catalog-list-image-link__image" src="img/catalog-pro-chicken-1000.jpg"
+              <img class="catalog-list-image-link__image" loading="lazy" src="img/catalog-pro-chicken-1000.jpg"
             srcset="img/catalog-pro-chicken-1000@2x.jpg 2x"
               alt="Питание Cat Energy PRO с курицей, 1000 грамм." width="84" height="100">
             </picture>
@@ -126,8 +142,10 @@
           <a class="catalog-list__image-link catalog-list-image-link" href="#">
 
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-pro-fish-500-tablet.webp 1x, img/catalog-pro-fish-500-tablet@2x.webp 2x" width="163" height="174">
+              <source type="image/webp" srcset="img/catalog-pro-fish-500.webp 1x, img/catalog-pro-fish-500@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/catalog-pro-fish-500-tablet.png 1x, img/catalog-pro-fish-500-tablet@2x.png 2x" width="163" height="174">
-              <img class="catalog-list-image-link__image" src="img/catalog-pro-fish-500.jpg"
+              <img class="catalog-list-image-link__image" loading="lazy" src="img/catalog-pro-fish-500.jpg"
               srcset="img/catalog-pro-fish-500@2x.jpg 2x"
                 alt="Питание Cat Energy PRO с рыбой, 500 грамм." width="68" height="78">
             </picture>
@@ -144,7 +162,7 @@
             </li>
             <li class="catalog-list__item">
               <span class="catalog-list__text">Вкус</span>
-              <span class="catalog-list__value">Курица</span>
+              <span class="catalog-list__value">Рыба</span>
             </li>
             <li class="catalog-list__item">
               <span class="catalog-list__text">Цена</span>
@@ -158,9 +176,13 @@
           <a class="catalog-list__image-link catalog-list-image-link" href="#">
 
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/catalog-pro-fish-1000-desktop.webp 1x, img/catalog-pro-fish-1000-desktop@2x.webp 2x" width="172" height="196">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-pro-fish-1000-tablet.webp 1x, img/catalog-pro-fish-1000-tablet@2x.webp 2x" width="168" height="200">
+              <source type="image/webp" srcset="img/catalog-pro-fish-1000.webp 1x, img/catalog-pro-fish-1000@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/catalog-pro-fish-1000-desktop.png 1x, img/catalog-pro-fish-1000-desktop@2x.png 2x" width="172" height="196">
               <source media="(min-width: 768px)" srcset="img/catalog-pro-fish-1000-tablet.png 1x, img/catalog-pro-fish-1000-tablet@2x.png 2x" width="168" height="200">
-              <img class="catalog-list-image-link__image" src="img/catalog-pro-fish-1000.jpg"
+              <img class="catalog-list-image-link__image" loading="lazy" src="img/catalog-pro-fish-1000.jpg"
               srcset="img/catalog-pro-fish-1000@2x.jpg 2x"
                 alt="Питание Cat Energy PRO с рыбой, 1000 грамм." width="84" height="100">
             </picture>
@@ -177,7 +199,7 @@
             </li>
             <li class="catalog-list__item">
               <span class="catalog-list__text">Вкус</span>
-              <span class="catalog-list__value">Курица</span>
+              <span class="catalog-list__value">Рыба</span>
             </li>
             <li class="catalog-list__item">
               <span class="catalog-list__text">Цена</span>
@@ -191,8 +213,10 @@
           <a class="catalog-list__image-link catalog-list-image-link" href="#">
 
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-slim-buckwheat-500-tablet.webp 1x, img/catalog-slim-buckwheat-500-tablet@2x.webp 2x" width="161" height="171">
+              <source type="image/webp" srcset="img/catalog-slim-buckwheat-500.webp 1x, img/catalog-slim-buckwheat-500@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/catalog-slim-buckwheat-500-tablet.png 1x, img/catalog-slim-buckwheat-500-tablet@2x.png 2x" width="161" height="171">
-              <img class="catalog-list-image-link__image" src="img/catalog-slim-buckwheat-500.jpg"
+              <img class="catalog-list-image-link__image" loading="lazy" src="img/catalog-slim-buckwheat-500.jpg"
               srcset="img/catalog-slim-buckwheat-500@2x.jpg 2x"
                 alt="Питание Cat Energy PRO с гречкой, 500 грамм." width="68" height="78">
             </picture>
@@ -209,7 +233,7 @@
             </li>
             <li class="catalog-list__item">
               <span class="catalog-list__text">Вкус</span>
-              <span class="catalog-list__value">Курица</span>
+              <span class="catalog-list__value">Гречка</span>
             </li>
             <li class="catalog-list__item">
               <span class="catalog-list__text">Цена</span>
@@ -223,9 +247,13 @@
           <a class="catalog-list__image-link catalog-list-image-link" href="#">
 
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/catalog-slim-buckwheat-1000-desktop.webp 1x, img/catalog-slim-buckwheat-1000-desktop@2x.webp 2x" width="172" height="196">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-slim-buckwheat-1000-tablet.webp 1x, img/catalog-slim-buckwheat-1000-tablet@2x.webp 2x" width="168" height="200">
+              <source type="image/webp" srcset="img/catalog-slim-buckwheat-1000.webp 1x, img/catalog-slim-buckwheat-1000@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/catalog-slim-buckwheat-1000-desktop.png 1x, img/catalog-slim-buckwheat-1000-desktop@2x.png 2x" width="172" height="196">
               <source media="(min-width: 768px)" srcset="img/catalog-slim-buckwheat-1000-tablet.png 1x, img/catalog-slim-buckwheat-1000-tablet@2x.png 2x" width="168" height="200">
-              <img class="catalog-list-image-link__image" src="img/catalog-slim-buckwheat-1000.png"
+              <img class="catalog-list-image-link__image" loading="lazy" src="img/catalog-slim-buckwheat-1000.png"
               srcset="img/catalog-slim-buckwheat-1000@2x.jpg 2x"
                 alt="Питание Cat Energy PRO с гречкой, 1000 грамм." width="84" height="100">
             </picture>
@@ -242,7 +270,7 @@
             </li>
             <li class="catalog-list__item">
               <span class="catalog-list__text">Вкус</span>
-              <span class="catalog-list__value">Курица</span>
+              <span class="catalog-list__value">Гречка</span>
             </li>
             <li class="catalog-list__item">
               <span class="catalog-list__text">Цена</span>
@@ -256,8 +284,10 @@
           <a class="catalog-list__image-link catalog-list-image-link" href="#">
 
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-slim-rice-500-tablet.webp 1x, img/catalog-slim-rice-500-tablet@2x.webp 2x" width="163" height="174">
+              <source type="image/webp" srcset="img/catalog-slim-rice-500.webp 1x, img/catalog-slim-rice-500@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/catalog-slim-rice-500-tablet.png 1x, img/catalog-slim-rice-500-tablet@2x.png 2x" width="163" height="174">
-              <img class="catalog-list-image-link__image" src="img/catalog-slim-rice-500.jpg"
+              <img class="catalog-list-image-link__image" loading="lazy" src="img/catalog-slim-rice-500.jpg"
               srcset="img/catalog-slim-rice-500@2x.jpg 2x"
                 alt="Питание Cat Energy PRO с рисом, 500 грамм." width="72" height="84">
             </picture>
@@ -275,7 +305,7 @@
             </li>
             <li class="catalog-list__item">
               <span class="catalog-list__text">Вкус</span>
-              <span class="catalog-list__value">Курица</span>
+              <span class="catalog-list__value">Рис</span>
             </li>
             <li class="catalog-list__item">
               <span class="catalog-list__text">Цена</span>
@@ -301,7 +331,7 @@
     <section class="additional-goods">
       <div class="additional-goods__wrapper container">
         <div class="additional-goods__container">
-          <h2 class="additional-goods__title title-form title-form--line">Дополнительные товары</h2>
+          <h2 class="additional-goods__title title-form">Дополнительные товары</h2>
           <ul class="additional-goods__list additional-goods-list">
 
             <li class="additional-goods__item additional-goods-item">
@@ -344,7 +374,7 @@
         </div>
         <section class="gifts"> <div class="gifts__container">
           <a class="gifts__link" href="#">
-            <h2 class="gifts__title ">Закажите все
+            <h2 class="gifts__title ">Закажите все <br>
               и получите чехол для
               кота в подарок!</h2>
           </a>
@@ -357,13 +387,28 @@
 
     <section class="contacts contacts--catalog">
       <h2 class="visually-hidden">Контакты.</h2>
-      <div class="contacts__wrapper contacts-wrapper contacts-wrapper--form container">
-        <h3 class="contacts-wrapper__subtitile">приглашаем к сотрудничеству дилеров!</h3>
+      <div class="contacts__wrapper contacts-wrapper contacts__wrapper--form contacts-wrapper--form container">
+        <h3 class="contacts-wrapper__subtitile">приглашаем <br> к сотрудничеству дилеров!</h3>
         <p class="contacts-wrapper__address">ул. Большая
           Конюшенная, д. 19/8
-          Санкт-Петербург</p>
+          <span>Санкт-Петербург</span></p>
       </div>
-      <div class="contacts__map map" data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A33a6384a169da9fe6a874e10027292468fc4d78870f41401455554d19f120d8a&amp;source=constructor"></div>
+      <div class="contacts__map map" data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A33a6384a169da9fe6a874e10027292468fc4d78870f41401455554d19f120d8a&amp;source=constructor">
+        <noscript>
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/location-desktop.webp 1x, img/location-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/location-desktop.jpg 1x, img/location-desktop@2x.jpg 2x" width="1440" height="400">
+            <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/location-tablet.webp 1x, img/location-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/location.webp 1x, img/location@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/location-tablet.jpg 1x, img/location-tablet@2x.jpg 2x" width="768" height="400">
+            <img src="img/location.jpg"
+            srcset="img/location.jpg 1x, img/location@2x.jpg 2x" loading="lazy"
+            alt="Месторасположение HTML-Academy." width="320" height="362">
+          </picture>
+        </noscript>
+      </div>
     </section>
   </main>
 
@@ -371,7 +416,7 @@
     <div class="main-footer__wrapper container">
 
       <a href="#" class="main-footer__logo-2 footer-logo">
-        <svg class="footer-logo__image" width="128" height="24">
+        <svg class="footer-logo__image" width="142" height="26" aria-hidden="true" focusable="false">
           <use xlink:href="icons/stack.svg#footer-logo"></use>
         </svg>
         <span class="visually-hidden">Логотип Cat Energy.</span>

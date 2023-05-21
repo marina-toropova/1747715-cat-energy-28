@@ -7,6 +7,12 @@
     position: relative;
   }
 
+  @media (min-width: @tablet) {
+    background-color: inherit;
+    border-top: transparent;
+    position: relative;
+  }
+
   &::after {
     @media (min-width: @tablet) {
       content: "";
@@ -26,7 +32,7 @@
 }
 
 .examples__wrapper {
-  padding: 25px 0 40px;
+  padding: 28px 0 40px;
   display: grid;
   grid-template-areas: "heading heading"
     "text text"
@@ -35,7 +41,7 @@
     "slider slider";
 
   @media (min-width: @tablet) {
-    padding: 43px 0 100px;
+    padding: 43px 0 32px;
     grid-template-rows: auto auto 54px auto auto;
     grid-template-columns: auto auto 174px;
     grid-template-areas: "heading heading heading"
@@ -46,14 +52,16 @@
   }
 
   @media (min-width: @desktop) {
-    padding: 69px 0 75px;
+    min-height: 667px;
+    position: relative;
+    padding: 69px 0 0;
     grid-template-columns: 218px 218px auto;
-    grid-template-rows: auto auto 69px auto 65px auto;
+    grid-template-rows: 0.4fr 18px 0.3fr 30px 0.1fr auto;
     grid-template-areas: "heading heading slider"
+      ". . slider"
       "text text slider"
       ". . slider"
       "blocks blocks slider"
-      ". . slider"
       "summary summary slider";
   }
 }
@@ -92,7 +100,7 @@
     display: block;
     background-color: @grey;
     width: 77px;
-    bottom: -14px;
+    bottom: -18px;
     text-align: center;
 
     @media (min-width: @tablet) {
@@ -101,7 +109,7 @@
       line-height: 14px;
       width: auto;
       padding: 0 10px;
-      bottom: -6px;
+      bottom: -10px;
     }
 
     @media (min-width: @desktop) {
@@ -131,12 +139,19 @@
     margin-top: 0;
     font-size: 20px;
     text-align: end;
+    align-self: center;
+
+    .examples__summary-cost {
+      margin-top: 8px;
+      display: block;
+    }
   }
 
   @media (min-width: @desktop) {
     text-align: start;
 
     .examples__summary-cost {
+      display: inline;
       margin-left: 63px;
     }
   }
@@ -149,12 +164,20 @@
 .examples__description.text-normal {
   margin-top: 40px;
 
+  br {
+    display: none;
+  }
+
   @media (min-width: @tablet) {
     margin-top: 63px;
   }
 
   @media (min-width: @desktop) {
-    margin-top: 146px;
+    margin-top: 0;
+
+    br {
+      display: block;
+    }
   }
 }
 
@@ -171,6 +194,13 @@
 
   @media (min-width: @tablet) {
     justify-self: center;
+    margin-top: 0;
+  }
+
+  @media (min-width: @desktop) {
+    position: absolute;
+    top: -108px;
+    left: -56px;
   }
 }
 
@@ -219,7 +249,6 @@
 }
 
 .examples__button {
-  position: absolute;
   width: 4px;
   height: 257px;
   background-color: @socials-grey;
@@ -230,7 +259,8 @@
 
   @media (min-width: @tablet) {
     height: 512px;
-    bottom: 0;
+    margin-bottom: 68px;
+    align-self: flex-end;
   }
 
   &:hover {
@@ -253,20 +283,24 @@
     border-radius: 50%;
     border: 2px solid @socials-grey;
     background-color: @white;
-    background-image: url("../../img/thumb.svg");
+    background-image: url("../img/thumb.svg");
     background-repeat: no-repeat;
     background-position: center;
-    top: 50%;
+    top: 42%;
     margin-left: -18px;
+
+    @media (min-width: @tablet) {
+      top: 50%;
+    }
   }
 }
 
 .examples__button:hover::before {
-  background-image: url("../../img/thumb-hover.svg");
+  background-image: url("../img/thumb-hover.svg");
   border-color: @green;
 }
 
 .examples__button:active::before {
-  background-image: url("../../img/thumb-hover.svg");
+  background-image: url("../img/thumb-hover.svg");
   border-color: @green;
 }

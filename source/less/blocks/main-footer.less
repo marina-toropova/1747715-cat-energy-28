@@ -13,11 +13,15 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  @media (min-width: @desktop) {
+    padding: 52px 0 52px;
+  }
 }
 
 .main-footer__logo-2 {
   @media (max-width: @only-mobile) {
-    padding-bottom: 20px;
+    padding-bottom: 13px;
     border-bottom: 1px solid @grey85;
     width: 280px;
     text-align: center;
@@ -27,10 +31,26 @@
     width: 142.8px;
     height: 26.12px;
   }
+
+  &:hover {
+    use {
+      fill: @footer-hover-grey;
+    }
+  }
+
+  &:active {
+    use {
+      fill: @footer-active-grey;
+    }
+  }
 }
 
 .main-footer__social {
   padding: 20px 0;
+
+  @media (min-width: @tablet) {
+    margin-left: 24px;
+  }
 }
 
 .main-footer__logo-wrapper {

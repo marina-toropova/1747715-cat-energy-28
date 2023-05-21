@@ -14,12 +14,29 @@
   }
 
   &--selection {
-    border-top: 1px solid @grey85;
-    border-bottom: 1px solid @grey85;
+    position: relative;
     align-items: start;
 
     @media (min-width: @desktop) {
       grid-area: selection;
+    }
+
+    @media (max-width: @tablet - 1px) {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 1000vw;
+        background-color: @special-grey-2;
+        top: -8px;
+        left: -1000px;
+      }
+
+      &::after {
+        top: auto;
+        bottom: 0;
+      }
     }
   }
 
@@ -33,10 +50,10 @@
 }
 
 .program-selection-form__list.program-selection-form__list--name {
-  padding: 39px 0 24px;
+  padding: 39px 0 28px;
 
   @media (min-width: @tablet) {
-    padding: 66px 0 72px;
+    padding: 66px 0 77px;
   }
 
   @media (min-width: @desktop) {
@@ -51,11 +68,11 @@
   @media (min-width: @tablet) {
     padding: 25px 28px 29px;
     border: 1px solid @greyE7;
-    row-gap: 28px;
+    row-gap: 23px;
   }
 
   @media (min-width: @desktop) {
-    padding: 25px 28px;
+    padding: 30px 28px;
   }
 
   input {
@@ -101,33 +118,33 @@
 }
 
 .program-selection-form__contact-details {
-  padding-top: 26px;
+  padding-top: 30px;
 
   @media (min-width: @tablet) {
-    padding-top: 71px;
+    padding-top: 74px;
   }
 
   @media (min-width: @desktop) {
-    padding-top: 69px;
+    padding-top: 65px;
     grid-area: contacts;
   }
 }
 
 .program-selection-form__comment {
-  padding: 23px 0;
+  padding: 23px 0 19px;
 
   @media (min-width: @tablet) {
-    padding: 65px 0;
+    padding: 65px 0 61px;
   }
 
   @media (min-width: @desktop) {
-    padding: 67px 0;
+    padding: 67px 0 62px;
     grid-area: comment;
   }
 
   textarea {
     width: 100%;
-    padding: 10px 12px 10px 15px;
+    padding: 5px 12px 10px 15px;
 
     @media (min-width: @tablet) {
       padding: 10px 19px;
@@ -135,6 +152,12 @@
 
     &::placeholder {
       .text-input;
+    }
+  }
+
+  .title-form--line::after {
+    @media (max-width: @only-mobile) {
+      top: 61%;
     }
   }
 }
@@ -153,7 +176,7 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    mask-image: url("../../img/icon-email.svg");
+    mask-image: url("../img/icon-email.svg");
     background-color: @dark-grey;
     right: 15px;
   }
@@ -167,7 +190,7 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    mask-image: url("../../img/icon-phone.svg");
+    mask-image: url("../img/icon-phone.svg");
     background-color: @dark-grey;
     right: 15px;
   }
@@ -185,10 +208,62 @@
 
 .input--email:focus {
   .program-selection-form__item::after {
-    background-color: @green; // не работает
+    background-color: @green;
   }
 }
 
 .program-selection-form__item--phone:focus::after {
-  background-color: @green; // не работает
+  background-color: @green;
+}
+
+.program-selection-form__item--weight label {
+  min-width: 60px;
+
+  @media (min-width: @tablet) {
+    width: 90px;
+  }
+}
+
+.program-selection-form__item--age label {
+  @media (max-width: @only-mobile) {
+    width: 167px;
+  }
+
+  @media (min-width: @tablet) {
+    width: 167px;
+  }
+}
+
+.program-selection-form__item--age input {
+  @media (min-width: @tablet) {
+    margin-left: -13px;
+  }
+}
+
+.program-selection-form__item--email label {
+  @media (max-width: @only-mobile) {
+    width: 69px;
+  }
+
+  @media (min-width: @tablet) {
+    width: 75px;
+  }
+}
+
+.program-selection-form__item--email--focus::after {
+  background-color: @green;
+}
+
+.program-selection-form__item--phone--focus::after {
+  background-color: @green;
+}
+
+.input--email:invalid + .program-selection-form__item--email::after {
+  background-color: @error;
+}
+
+// Если не удается инвалидировать форму, то добавить класс пункту списка .program-selection-form__item--email
+
+.program-selection-form__item--error::after {
+  background-color: @error;
 }

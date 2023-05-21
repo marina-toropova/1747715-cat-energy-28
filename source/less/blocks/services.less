@@ -9,16 +9,16 @@
 .services__description {
   margin: 0;
   padding: 29px 0 23px;
-  border-bottom: 1px solid #d9d9d9; // положить в переменную
+  border-bottom: 1px solid @grey85;
 
   @media (min-width: @tablet) {
     width: 340px;
     border: none;
-    padding: 24px 0 48px;
+    padding: 24px 0 53px;
   }
 
   @media (min-width: @desktop) {
-    padding: 73px 0 23px;
+    padding: 73px 0 29px;
     width: auto;
   }
 }
@@ -28,16 +28,16 @@
   position: relative;
 
   @media (max-width: 767px) {
-    padding-top: 15px;
+    padding-top: 17px;
   }
 
   &::after {
     position: absolute;
     content: "";
-    width: 24px;
-    height: 12px;
+    width: 32px;
+    height: 21px;
     background-color: @black;
-    mask-image: url("../../icons/stack.svg#arrow-right");
+    mask-image: url("../icons/stack.svg#arrow-right");
     margin-left: 15px;
 
     @media (min-width: @tablet) {
@@ -49,9 +49,19 @@
 
 .services__link:hover::after {
   width: 32px;
-  mask-image: url("../../icons/stack.svg#arrow-right-hover");
+  mask-image: url("../icons/stack.svg#arrow-right-hover");
 }
 
 .services__link:active {
   opacity: 0.3;
+}
+
+.services__title.title-services {
+  @media (max-width: @only-mobile) {
+    margin-left: 14px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-left: 35px;
+  }
 }

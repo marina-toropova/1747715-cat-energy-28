@@ -23,6 +23,6 @@ navToggle.addEventListener('click', function () {
 window.addEventListener('load', function() {
   let map = document.querySelector('.map');
   let screenWidth = window.innerWidth;
-  let mapHeight = screenWidth < 768 ? '400px' : '362px';
+  let mapHeight = screenWidth < '768px' ? '400px' : '362px';
   map.innerHTML = '<iframe src="'+map.getAttribute('data-src')+'" width="100%" height="'+mapHeight+'" frameborder="0"></iframe>';
 });

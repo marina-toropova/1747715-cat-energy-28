@@ -1,8 +1,13 @@
 .how-it-works__wrapper {
-  padding: 20px 0 49px;
+  padding: 17px 0 49px;
 
   @media (min-width: @tablet) {
     padding: 45px 0 47px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 71px 0 0 8px;
+    max-width: 1240px;
   }
 }
 
@@ -12,6 +17,7 @@
 
   @media (min-width: @tablet) {
     padding-left: 0;
+    margin-top: 32px;
   }
 }
 
@@ -20,6 +26,10 @@
 
   @media (min-width: @tablet) {
     padding: 151px 26px 57px 0;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 151px 0 57px;
   }
 
   &::before {
@@ -35,25 +45,25 @@
     @media (min-width: @tablet) {
       width: 80px;
       height: 80px;
-      top: 48px;
+      top: 40px;
       left: 0;
     }
   }
 
   &--leaf::before {
-    background-image: url("../../icons/stack.svg#icon-leaf");
+    background-image: url("../img/icon-leaf.svg");
   }
 
   &--tub::before {
-    background-image: url("../../img/icon-tub.svg");
+    background-image: url("../img/icon-tub.svg");
   }
 
   &--eat::before {
-    background-image: url("../../img/icon-eat.svg");
+    background-image: url("../img/icon-eat.svg");
   }
 
   &--alarm::before {
-    background-image: url("../../img/icon-alarm.svg");
+    background-image: url("../img/icon-alarm.svg");
   }
 
   &::after {
@@ -77,5 +87,23 @@
 .how-it-works__text {
   @media (max-width: @tablet - 1px) {
     max-width: 253px;
+  }
+}
+
+.how-it-works__item--tub .how-it-works__text {
+  @media (min-width: @tablet) {
+    min-width: 219px;
+  }
+}
+
+.how-it-works__item--alarm .how-it-works__text {
+  @media (min-width: @tablet) {
+    min-width: 254px;
+  }
+}
+
+.how-it-works__item--alarm br {
+  @media (max-width: @only-mobile) {
+    display: none;
   }
 }

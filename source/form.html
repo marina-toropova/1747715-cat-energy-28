@@ -5,11 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/lato/lato-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswald-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswald-medium.woff2" as="font" crossorigin="anonymous">
   <link rel="icon" href="../favicon.ico">
   <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="../manifest.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Кэт энерджи. Подбор программы.</title>
 </head>
 
@@ -18,12 +21,19 @@
     <div class="main-header__container container">
       <div class="main-header__logo-wrapper">
 
-        <a href="index.html" class="main-header__logo logo">
-          <span class="visually-hidden">Логотип.</span>
+        <a href="#" class="main-header__logo logo">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="71" height="60">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="61" height="50">
+            <img src="img/logo-mobile.svg" alt="Логотип Cat Energy." width="33" height="38">
+          </picture>
         </a>
 
         <a href="#" class="main-header__logo-2 logo-2">
-          <img src="img/logo-2.svg" width="101" height="18" alt="Логотип Cat Energy.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-2-desktop.svg" width="119" height="33">
+            <img src="img/logo-2.svg" width="101" height="18" alt="Логотип Cat Energy.">
+          </picture>
         </a>
       </div>
 
@@ -61,15 +71,15 @@
           method="get">
 
           <ul class="program-selection-form__list program-selection-list program-selection-form__list--name">
-            <li class="program-selection-form__item">
+            <li class="program-selection-form__item program-selection-form__item--name">
               <label for="name">ИМЯ:*</label>
-              <input class="input" type="text" name="name" placeholder="барсик" id="name" required>
+              <input class="input input--name" type="text" name="name" placeholder="барсик" id="name" required>
             </li>
-            <li class="program-selection-form__item">
+            <li class="program-selection-form__item program-selection-form__item--weight">
               <label for="weight">Вес (кг):*</label>
-              <input class="input" type="text" name="weight" id="weight" placeholder="7" required>
+              <input class="input input--weight" type="text" name="weight" id="weight" placeholder="7" required>
             </li>
-            <li class="program-selection-form__item">
+            <li class="program-selection-form__item program-selection-form__item--age">
               <label for="age">Возраст (лет):</label>
               <input class="input" type="text" name="age" id="age" placeholder="7">
             </li>
@@ -115,7 +125,7 @@
               </li>
               <li class="program-selection-form__item program-selection-form__item--phone">
                 <label for="phone">Телефон:*</label>
-                <input class="input input--phone" type="tel" name="phone" placeholder="7" id="phone" required>
+                <input class="input input--phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" id="phone" required>
               </li>
             </ul>
           </div>
@@ -190,12 +200,27 @@
     <section class="contacts contacts--catalog">
       <h2 class="visually-hidden">Контакты.</h2>
       <div class="contacts__wrapper contacts-wrapper contacts-wrapper--form container">
-        <h3 class="contacts-wrapper__subtitile">приглашаем к сотрудничеству дилеров!</h3>
+        <h3 class="contacts-wrapper__subtitile">приглашаем <br> к сотрудничеству дилеров!</h3>
         <p class="contacts-wrapper__address">ул. Большая
           Конюшенная, д. 19/8
-          Санкт-Петербург</p>
+          <span>Санкт-Петербург</span></p>
       </div>
-      <div class="contacts__map map" data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A33a6384a169da9fe6a874e10027292468fc4d78870f41401455554d19f120d8a&amp;source=constructor"></div>
+      <div class="contacts__map map" data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A33a6384a169da9fe6a874e10027292468fc4d78870f41401455554d19f120d8a&amp;source=constructor">
+        <noscript>
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/location-desktop.webp 1x, img/location-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/location-desktop.jpg 1x, img/location-desktop@2x.jpg 2x" width="1440" height="400">
+            <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/location-tablet.webp 1x, img/location-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/location.webp 1x, img/location@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/location-tablet.jpg 1x, img/location-tablet@2x.jpg 2x" width="768" height="400">
+            <img src="img/location.jpg"
+            srcset="img/location.jpg 1x, img/location@2x.jpg 2x" loading="lazy"
+            alt="Месторасположение HTML-Academy." width="320" height="362">
+          </picture>
+        </noscript>
+      </div>
     </section>
   </main>
 
@@ -203,7 +228,7 @@
     <div class="main-footer__wrapper container">
 
       <a href="#" class="main-footer__logo-2 footer-logo">
-        <svg class="footer-logo__image" width="128" height="24">
+        <svg class="footer-logo__image" width="142" height="26" aria-hidden="true" focusable="false">
           <use xlink:href="icons/stack.svg#footer-logo"></use>
         </svg>
         <span class="visually-hidden">Логотип Cat Energy.</span>
@@ -243,6 +268,7 @@
     </div>
   </footer>
   <script src="js/script.js"></script>
+  <script src="js/form.js"></script>
 </body>
 
 </html>

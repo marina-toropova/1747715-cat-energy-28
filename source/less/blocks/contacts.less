@@ -23,10 +23,14 @@
 .contacts__wrapper {
   padding: 26px 0;
   display: flex;
-  justify-content: space-between;
+
+  @media (max-width: @only-mobile) {
+    column-gap: 16px;
+  }
 
   @media (min-width: @tablet) {
-    padding: 56px 0;
+    justify-content: space-between;
+    padding: 61px 0;
   }
 
   @media (min-width: @desktop) {
@@ -35,7 +39,7 @@
     background-color: @white;
     width: 565px;
     margin: 0;
-    padding: 56px 60px 56px 80px;
+    padding: 59px 60px 60px 80px;
     position: absolute;
     margin-top: 95px;
     margin-left: 110px;
@@ -45,5 +49,11 @@
 .contacts__map {
   @media (min-width: @desktop) {
     grid-area: map;
+  }
+}
+
+.contacts__wrapper--form {
+  @media (max-width: @only-mobile) {
+    margin-top: 35px;
   }
 }
