@@ -26,5 +26,3 @@ window.addEventListener('load', function() {
   let mapHeight = screenWidth < '768px' ? '400px' : '362px';
   map.innerHTML = '<iframe src="'+map.getAttribute('data-src')+'" width="100%" height="'+mapHeight+'" frameborder="0"></iframe>';
 });
-
-
