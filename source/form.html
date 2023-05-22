@@ -19,23 +19,21 @@
 <body class="page__body">
   <header class="main-header main-header--line">
     <div class="main-header__container container">
-      <div class="main-header__logo-wrapper">
 
-        <a href="#" class="main-header__logo logo">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="71" height="60">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="61" height="50">
-            <img src="img/logo-mobile.svg" alt="Логотип Cat Energy." width="33" height="38">
-          </picture>
-        </a>
+      <a href="index.html" class="main-header__logo-link">
 
-        <a href="#" class="main-header__logo-2 logo-2">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/logo-2-desktop.svg" width="119" height="33">
-            <img src="img/logo-2.svg" width="101" height="18" alt="Логотип Cat Energy.">
-          </picture>
-        </a>
-      </div>
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="71" height="60">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="61" height="50">
+          <img class="main-header__logo logo" src="img/logo-mobile.svg" alt="Логотип Cat Energy." width="33" height="38">
+        </picture>
+
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-2-desktop.svg" width="119" height="33">
+          <img class="main-header__logo-2 logo-2" src="img/logo-2.svg" width="101" height="18" alt="Логотип Cat Energy.">
+        </picture>
+
+      </a>
 
       <nav class="main-header__nav nav nav--closed nav--nojs">
 
@@ -67,7 +65,7 @@
         <p class="program-selection__text">Заполните анкету, и мы подберем <br>
           программу питания для вашего кота</p>
 
-        <form class="program-selection__form programm-selection-form" action="https://echo.htmlacademy.ru/"
+        <form class="program-selection__form program-selection-form" action="https://echo.htmlacademy.ru/"
           method="get">
 
           <ul class="program-selection-form__list program-selection-list program-selection-form__list--name">
@@ -187,10 +185,10 @@
               </li>
 
             </ul>
-            <div class="additionally_link-text-wrapper">
-            <button class="additionally__link button button--wide button--primary" type="submit" >отправить заявку</button>
-            <span class="additionally__text">* — Обязательные поля</span>
-          </div>
+            <div class="additionally__link-text-wrapper">
+              <button class="additionally__link button button--wide button--primary" type="submit" >отправить заявку</button>
+              <span class="additionally__text">* — Обязательные поля</span>
+            </div>
           </div>
 
         </form>
